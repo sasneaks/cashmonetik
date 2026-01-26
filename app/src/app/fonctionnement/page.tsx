@@ -178,7 +178,7 @@ export default function FonctionnementPage() {
               transition={{ delay: 0.1 }}
               className="text-lg text-muted-foreground max-w-2xl mx-auto"
             >
-              De l'audit initial au support continu, nous vous accompagnons à chaque étape.
+              De la phase initiale au support continu, nous vous accompagnons à chaque étape.
             </motion.p>
           </div>
 

@@ -10,7 +10,6 @@ import {
   TrendingDown,
   Clock,
   Zap,
-  BarChart3,
   CheckCircle2,
   ArrowUpRight,
   Play,
