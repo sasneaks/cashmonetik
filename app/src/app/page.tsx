@@ -474,7 +474,7 @@ export default function Home() {
                 <h3 className="text-white font-bold text-2xl mb-4">
                   Solution adaptée à chaque environnement
                 </h3>
-                <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white/10 rounded-xl">
+                <Button asChild className="bg-white/10 border-0 text-white hover:bg-white/20 rounded-xl">
                   <Link href="/secteurs">
                     Voir tous les secteurs
                     <ArrowRight className="ml-2 w-4 h-4" />
