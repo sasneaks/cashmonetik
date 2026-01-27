@@ -2,18 +2,15 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
-import Link from "next/link"
 import {
   Target,
   Users,
   Award,
   Handshake,
-  ArrowRight,
   CheckCircle2,
   Shield,
   Zap,
 } from "lucide-react"
-import { Button } from "@/components/ui/button"
 
 const values = [
   {
@@ -327,60 +324,6 @@ export default function AProposPage() {
                   </div>
                 </motion.div>
               ))}
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-24 bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/grid.svg')] opacity-10" />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6"
-            >
-              Envie de nous rejoindre ?
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-xl text-white/80 mb-10 max-w-2xl mx-auto"
-            >
-              Nous sommes toujours à la recherche de talents pour renforcer
-              notre équipe. Consultez nos offres ou envoyez-nous une candidature
-              spontanée.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
-              <Button
-                asChild
-                size="lg"
-                className="h-14 px-8 bg-white text-orange-600 hover:bg-orange-50 rounded-xl hover-lift"
-              >
-                <Link href="/contact">
-                  Nous contacter
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="h-14 px-8 border-white/30 text-white hover:bg-white/10 rounded-xl"
-              >
-                <Link href="/audit">Demander un audit</Link>
-              </Button>
             </motion.div>
           </div>
         </div>

@@ -12,7 +12,6 @@ import {
   Cog,
   ArrowRight,
   CheckCircle2,
-  Zap,
   Play,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -320,60 +319,6 @@ export default function SolutionsPage() {
                 <p className="text-slate-400">{feature.description}</p>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA - Colorful gradient */}
-      <section className="py-24 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/grid.svg')] opacity-10" />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6"
-            >
-              <Zap className="w-4 h-4" />
-              Audit gratuit
-            </motion.div>
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6"
-            >
-              Vous ne savez pas quelle solution choisir ?
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto"
-            >
-              Nos experts analysent gratuitement vos besoins et vous recommandent
-              la solution la plus adaptée à votre configuration.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
-              <Button asChild size="lg" className="h-14 px-8 bg-white text-blue-600 hover:bg-blue-50 rounded-xl hover-lift">
-                <Link href="/audit">
-                  Planifier un audit gratuit
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="h-14 px-8 border-white/30 text-white hover:bg-white/10 rounded-xl">
-                <Link href="/contact">Nous contacter</Link>
-              </Button>
-            </motion.div>
           </div>
         </div>
       </section>

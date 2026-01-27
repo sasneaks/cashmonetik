@@ -2,17 +2,14 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
-import Link from "next/link"
 import {
   FileSearch,
   Settings,
   Rocket,
   HeadphonesIcon,
-  ArrowRight,
   CheckCircle2,
   Play,
 } from "lucide-react"
-import { Button } from "@/components/ui/button"
 
 const steps = [
   {
@@ -291,58 +288,6 @@ export default function FonctionnementPage() {
                 </div>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-24 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/grid.svg')] opacity-10" />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6"
-            >
-              Prêt à démarrer votre projet ?
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-xl text-white/80 mb-10 max-w-2xl mx-auto"
-            >
-              Commencez par un audit gratuit de vos besoins. Nos experts vous
-              accompagnent de A à Z.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
-              <Button
-                asChild
-                size="lg"
-                className="h-14 px-8 bg-white text-purple-600 hover:bg-purple-50 rounded-xl hover-lift"
-              >
-                <Link href="/audit">
-                  Demander un audit gratuit
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                className="h-14 px-8 bg-purple-500 text-white hover:bg-purple-600 rounded-xl border-0"
-              >
-                <Link href="/solutions">Voir nos solutions</Link>
-              </Button>
-            </motion.div>
           </div>
         </div>
       </section>
