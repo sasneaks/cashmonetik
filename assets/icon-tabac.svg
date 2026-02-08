@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 80">
+  <polygon points="20,0 40,10 40,70 20,80 0,70 0,10" fill="#E31E24" stroke="#fff" stroke-width="2"/>
+  <text x="20" y="22" text-anchor="middle" fill="white" font-family="Arial Black, sans-serif" font-size="11" font-weight="bold">T</text>
+  <text x="20" y="34" text-anchor="middle" fill="white" font-family="Arial Black, sans-serif" font-size="11" font-weight="bold">A</text>
+  <text x="20" y="46" text-anchor="middle" fill="white" font-family="Arial Black, sans-serif" font-size="11" font-weight="bold">B</text>
+  <text x="20" y="58" text-anchor="middle" fill="white" font-family="Arial Black, sans-serif" font-size="11" font-weight="bold">A</text>
+  <text x="20" y="70" text-anchor="middle" fill="white" font-family="Arial Black, sans-serif" font-size="11" font-weight="bold">C</text>
+</svg>
