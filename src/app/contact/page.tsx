@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { PageHero } from '@/components/ui/PageHero';
 import { ContactForm } from '@/components/sections/contact/ContactForm';
-import { RoiCalculator } from '@/components/sections/contact/RoiCalculator';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -22,7 +21,6 @@ export default function ContactPage() {
         subtitle="Recevez un audit personnalisé gratuit et une proposition sur mesure sous 48h."
       />
       <ContactForm />
-      <RoiCalculator />
     </>
   );
 }
