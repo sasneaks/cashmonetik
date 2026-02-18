@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { AlertCircle, Clock, ClipboardCheck, LockOpen } from 'lucide-react';
+import { AlertCircle, Clock, ClipboardCheck, LockOpen, Shield, Sparkles } from 'lucide-react';
 import { fadeUp, staggerContainer } from '@/lib/animations';
 import { problems } from '@/lib/content';
 import { Container } from '@/components/ui/Container';
@@ -12,6 +12,8 @@ const iconMap = {
   clock: Clock,
   clipboard: ClipboardCheck,
   lockOpen: LockOpen,
+  shield: Shield,
+  sparkles: Sparkles,
 } as const;
 
 export function Problems() {
