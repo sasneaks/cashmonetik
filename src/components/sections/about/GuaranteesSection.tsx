@@ -13,8 +13,8 @@ const guaranteeData = [
     icon: <CheckCircle className="w-6 h-6" />,
   },
   {
-    title: 'Installation 48h chrono',
-    description: "Engagement ferme d'installation sous 48h ou c'est gratuit. Nous respectons nos délais et votre temps.",
+    title: 'Installation rapide',
+    description: "Installation rapide et professionnelle par nos techniciens certifiés. Nous respectons nos délais et votre temps.",
     icon: <Zap className="w-6 h-6" />,
   },
   {

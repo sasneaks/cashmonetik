@@ -32,14 +32,14 @@ export const heroTypedStrings = [
 export const socialProof = [
   { value: '500+', label: 'commerces équipés' },
   { value: '98%', label: 'clients satisfaits' },
-  { value: '48h', label: 'installation' },
+  { value: 'Rapide', label: 'installation' },
 ];
 
 export const trustBadges = [
   { label: 'Certifié PCI-DSS', icon: 'lock' as const },
   { label: 'Fabriqué en Europe', icon: 'globe' as const },
   { label: 'Conforme RGPD', icon: 'shield' as const },
-  { label: 'Garantie 3 ans', icon: 'check' as const },
+  { label: 'Garantie 1 an', icon: 'check' as const },
 ];
 
 export const clientLogos = [
@@ -52,15 +52,15 @@ export const clientLogos = [
 
 export const problems = [
   {
-    stat: '-2% CA',
+    stat: '2% du CA cash',
     title: 'Erreurs de caisse',
-    description: "Les erreurs manuelles coûtent en moyenne 2% de votre chiffre d'affaires. Chaque euro mal compté est un euro perdu.",
+    description: "Les erreurs manuelles coûtent en moyenne 2% de votre chiffre d'affaires cash. Chaque euro mal compté est un euro perdu.",
     icon: 'alertCircle' as const,
   },
   {
-    stat: '+10% abandon',
+    stat: '+30% abandon',
     title: "Files d'attente",
-    description: "Vos clients attendent, s'impatientent, partent. Chaque minute d'attente augmente le risque d'abandon de 10%.",
+    description: "Vos clients attendent, s'impatientent, partent. Les files d'attente entraînent jusqu'à 30% d'abandon en caisse.",
     icon: 'clock' as const,
   },
   {
@@ -71,9 +71,15 @@ export const problems = [
   },
   {
     stat: '1re source de perte',
-    title: 'Sécurité du cash',
-    description: 'Erreurs de caisse, écarts de fond de caisse, pertes non identifiées. Le cash non sécurisé fragilise votre rentabilité.',
+    title: 'Sécurité de vos espèces',
+    description: 'Démarque inconnue, vols, oublis et erreurs de fond de caisse fragilisent votre rentabilité. Sans coffre sécurisé, vos espèces sont exposées. De plus, l\'argent liquide transporte jusqu\'à 3 000 bactéries par billet.',
     icon: 'lockOpen' as const,
+  },
+  {
+    stat: 'Image pro',
+    title: 'Image de marque',
+    description: 'Un équipement moderne contribue à votre image de marque. Vos clients perçoivent un commerce professionnel, innovant et digne de confiance.',
+    icon: 'shield' as const,
   },
 ];
 
@@ -124,9 +130,9 @@ export const howItWorks = [
   },
   {
     number: '02',
-    title: 'Installation 48h',
+    title: 'Installation rapide',
     description: 'Livraison, installation et configuration complète par nos techniciens certifiés. Formation de votre équipe incluse. Clé en main.',
-    detail: '48 heures chrono',
+    detail: 'Mise en service rapide',
     detailIcon: 'zap' as const,
   },
   {
@@ -196,7 +202,7 @@ export const faqItems = [
   },
   {
     question: "Quel est le délai d'installation ?",
-    answer: "L'installation se fait sous 48h chrono. Cela inclut la livraison, l'installation, la configuration et la formation de votre équipe.",
+    answer: "L'installation se fait rapidement. Cela inclut la livraison, l'installation, la configuration et la formation de votre équipe.",
   },
   {
     question: 'Proposez-vous une formation ?',
@@ -204,7 +210,7 @@ export const faqItems = [
   },
   {
     question: 'Quelle est la durée de la garantie ?',
-    answer: 'Tous nos équipements sont garantis 3 ans pièces et main d\'œuvre. Nous proposons également des extensions de garantie.',
+    answer: 'Tous nos équipements sont garantis 1 an pièces et main d\'œuvre. Nous proposons également des extensions de garantie.',
   },
   {
     question: 'Comment fonctionne le support technique ?',
@@ -226,7 +232,7 @@ export const faqItems = [
 
 export const chatbotResponses: Record<string, string> = {
   prix: "Nos solutions sont disponibles en location ou à l'achat. Installation et formation incluses dans tous nos contrats.\n\nPour obtenir un devis personnalisé adapté à votre activité, contactez-nous au 01 62 34 34 62 ou demandez un audit gratuit sur notre page contact !",
-  installation: "L'installation se fait sous 48h chrono ! Notre processus :\n1. Livraison sur site\n2. Installation et configuration\n3. Formation de votre équipe (2h)\n4. Tests et mise en service\n\nTout est inclus dans votre contrat.",
+  installation: "L'installation se fait rapidement ! Notre processus :\n1. Livraison sur site\n2. Installation et configuration\n3. Formation de votre équipe (2h)\n4. Tests et mise en service\n\nTout est inclus dans votre contrat.",
   produits: "Notre gamme complète :\n- Caisses automatiques (monnayeurs)\n- Bornes de commande interactives\n- Caisses tactiles nouvelle génération\n- Balances professionnelles connectées\n- Robot Sparkoz (nettoyage autonome)\n\nChaque solution est personnalisable.",
   contact: "Contactez notre équipe commerciale :\n- Tél : 01 62 34 34 62\n- Email : support@cashmonetik.fr\n- Horaires : Lun-Ven 9h-18h\n\nOu demandez un audit gratuit sur notre page contact !",
 };
@@ -345,8 +351,8 @@ export const catalogueProducts = [
 
 export const guarantees = [
   {
-    title: 'Installation sous 48h',
-    description: 'Livraison, installation et formation incluses. Votre équipement est opérationnel en 48h chrono.',
+    title: 'Installation rapide',
+    description: 'Livraison, installation et formation incluses. Votre équipement est opérationnel rapidement.',
     icon: 'zap' as const,
   },
   {
@@ -404,7 +410,7 @@ export const processSteps = [
     tag: 'Étape 3',
     title: 'Installation',
     description: 'Livraison, installation, configuration et formation de votre équipe.',
-    duration: '48h chrono',
+    duration: 'Rapide',
   },
   {
     number: '04',

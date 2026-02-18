@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: '%s | CashMonetik',
   },
   description:
-    "CashMonetik équipe les professionnels avec des caisses automatiques, bornes de commande et robots de nettoyage. Installation sous 48h, formation incluse, support 24/7.",
+    "CashMonetik équipe les professionnels avec des caisses automatiques, bornes de commande et robots de nettoyage. Installation rapide, formation incluse, support 24/7.",
   keywords: [
     'caisse automatique',
     'borne de commande',
@@ -45,14 +45,14 @@ export const metadata: Metadata = {
     siteName: 'CashMonetik',
     title: 'CashMonetik | Solutions monétiques nouvelle génération',
     description:
-      "Caisses automatiques, bornes de commande et robots de nettoyage. Installation sous 48h pour les commerces de proximité.",
+      "Caisses automatiques, bornes de commande et robots de nettoyage. Installation rapide pour les commerces de proximité.",
     images: [{ url: '/assets/logo-cashmonetik.webp' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'CashMonetik | Solutions monétiques nouvelle génération',
     description:
-      "Caisses automatiques, bornes de commande et robots de nettoyage. Installation sous 48h.",
+      "Caisses automatiques, bornes de commande et robots de nettoyage. Installation rapide.",
     images: ['/assets/logo-cashmonetik.webp'],
   },
   icons: {

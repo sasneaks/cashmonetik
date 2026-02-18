@@ -230,7 +230,7 @@ export function Hero() {
             <div ref={descRef}>
               <p className="text-[1.05rem] text-text-secondary leading-[1.75] mb-8 max-w-[480px]">
                 Caisses automatiques, bornes de commande et solutions de
-                paiement. Installation sous 48h, formation incluse, support
+                paiement. Installation rapide, formation incluse, support
                 24/7.
               </p>
             </div>
