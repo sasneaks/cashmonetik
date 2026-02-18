@@ -46,14 +46,14 @@ export const metadata: Metadata = {
     title: 'CashMonetik | Solutions monétiques nouvelle génération',
     description:
       "Caisses automatiques, bornes de commande et robots de nettoyage. Installation sous 48h pour les commerces de proximité.",
-    images: [{ url: '/assets/og-image.png' }],
+    images: [{ url: '/assets/logo-cashmonetik.png' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'CashMonetik | Solutions monétiques nouvelle génération',
     description:
       "Caisses automatiques, bornes de commande et robots de nettoyage. Installation sous 48h.",
-    images: ['/assets/og-image.png'],
+    images: ['/assets/logo-cashmonetik.png'],
   },
   icons: {
     icon: [

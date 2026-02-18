@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Politique de Confidentialité',
+  description: 'Politique de confidentialité de CashMonetik. Traitement des données personnelles, cookies et droits RGPD.',
   robots: { index: false, follow: true },
 };
 

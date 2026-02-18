@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Conditions Générales de Vente',
+  description: 'Conditions générales de vente de CashMonetik. Modalités de commande, livraison, garantie et paiement.',
   robots: { index: false, follow: true },
 };
 
