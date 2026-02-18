@@ -72,7 +72,7 @@ export const problems = [
   {
     stat: '1re source de perte',
     title: 'Sécurité de vos espèces',
-    description: 'Démarque inconnue, vols, oublis et erreurs de fond de caisse fragilisent votre rentabilité. Sans coffre sécurisé, vos espèces sont exposées. De plus, l\'argent liquide transporte jusqu\'à 3 000 bactéries par billet.',
+    description: 'Démarque inconnue, vols et oublis fragilisent votre rentabilité. Un coffre sécurisé protège chaque euro. L\'argent transporte jusqu\'à 3 000 bactéries par billet.',
     icon: 'lockOpen' as const,
   },
   {
