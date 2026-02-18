@@ -33,7 +33,7 @@ export function Problems() {
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
           variants={staggerContainer}
-          className="grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-5"
+          className="grid grid-cols-4 max-lg:grid-cols-2 gap-5 max-sm:gap-3"
         >
           {problems.map((problem, i) => {
             const Icon = iconMap[problem.icon];
@@ -41,7 +41,7 @@ export function Problems() {
               <motion.div
                 key={i}
                 variants={fadeUp}
-                className="group relative p-6 bg-bg-card backdrop-blur-sm border border-border rounded-md overflow-hidden transition-all duration-500 hover:bg-bg-card-hover hover:border-border-hover"
+                className="group relative p-6 max-sm:p-4 bg-bg-card backdrop-blur-sm border border-border rounded-md overflow-hidden transition-all duration-500 hover:bg-bg-card-hover hover:border-border-hover"
               >
                 {/* Red top border on hover */}
                 <div className="absolute top-0 left-0 right-0 h-[2px] bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
@@ -55,8 +55,8 @@ export function Problems() {
                   </span>
                 </div>
 
-                <h3 className="font-display text-base font-bold mb-2">{problem.title}</h3>
-                <p className="text-sm text-text-secondary leading-relaxed">{problem.description}</p>
+                <h3 className="font-display text-base max-sm:text-sm font-bold mb-2 max-sm:mb-1">{problem.title}</h3>
+                <p className="text-sm max-sm:text-xs text-text-secondary leading-relaxed">{problem.description}</p>
               </motion.div>
             );
           })}

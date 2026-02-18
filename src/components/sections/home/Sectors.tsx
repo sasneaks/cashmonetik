@@ -28,16 +28,16 @@ export function Sectors() {
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
           variants={staggerContainer}
-          className="grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-5"
+          className="grid grid-cols-4 max-lg:grid-cols-2 gap-5 max-sm:gap-3"
         >
           {sectors.map((sector, i) => (
             <motion.div key={i} variants={fadeUp}>
               <Link
                 href="/secteurs"
-                className="group flex flex-col items-center text-center p-6 bg-bg-card backdrop-blur-sm border border-border rounded-md transition-all duration-500 hover:bg-bg-card-hover hover:border-border-hover hover:-translate-y-1 h-full"
+                className="group flex flex-col items-center text-center p-6 max-sm:p-4 bg-bg-card backdrop-blur-sm border border-border rounded-md transition-all duration-500 hover:bg-bg-card-hover hover:border-border-hover hover:-translate-y-1 h-full"
               >
                 {/* Icon */}
-                <div className="w-16 h-16 mb-5 relative flex items-center justify-center">
+                <div className="w-16 h-16 max-sm:w-12 max-sm:h-12 mb-5 max-sm:mb-3 relative flex items-center justify-center">
                   <Image
                     src={sector.icon}
                     alt={sector.title}
@@ -48,10 +48,10 @@ export function Sectors() {
                 </div>
 
                 {/* Title */}
-                <h3 className="font-display text-lg font-bold mb-2">{sector.title}</h3>
+                <h3 className="font-display text-lg max-sm:text-base font-bold mb-2 max-sm:mb-1">{sector.title}</h3>
 
                 {/* Description */}
-                <p className="text-sm text-text-secondary leading-relaxed mb-4">
+                <p className="text-sm max-sm:text-xs text-text-secondary leading-relaxed mb-4 max-sm:mb-2">
                   {sector.description}
                 </p>
 

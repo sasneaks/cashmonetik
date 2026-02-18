@@ -41,7 +41,7 @@ export function Solutions() {
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
           variants={staggerContainer}
-          className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-5 auto-rows-fr"
+          className="grid grid-cols-3 max-lg:grid-cols-2 gap-5 max-sm:gap-3 auto-rows-fr"
         >
           {solutions.map((solution, i) => (
             <motion.div
@@ -75,7 +75,7 @@ export function Solutions() {
               <div
                 className={cn(
                   'relative w-full bg-bg-elevated flex items-center justify-center overflow-hidden',
-                  solution.featured ? 'h-[240px] max-lg:h-[180px]' : 'h-[180px]'
+                  solution.featured ? 'h-[240px] max-lg:h-[180px] max-sm:h-[120px]' : 'h-[180px] max-sm:h-[120px]'
                 )}
               >
                 <Image
@@ -88,14 +88,14 @@ export function Solutions() {
               </div>
 
               {/* Content */}
-              <div className="relative z-10 p-6">
-                <h3 className="font-display text-lg font-bold mb-2">{solution.title}</h3>
-                <p className="text-sm text-text-secondary leading-relaxed mb-4">
+              <div className="relative z-10 p-6 max-sm:p-4">
+                <h3 className="font-display text-lg max-sm:text-base font-bold mb-2 max-sm:mb-1">{solution.title}</h3>
+                <p className="text-sm max-sm:text-xs text-text-secondary leading-relaxed mb-4 max-sm:mb-2">
                   {solution.description}
                 </p>
 
                 {/* Feature list */}
-                <ul className="space-y-2 mb-5">
+                <ul className="space-y-2 max-sm:space-y-1 mb-5 max-sm:mb-3 max-sm:hidden">
                   {solution.features.map((feature, j) => (
                     <li key={j} className="flex items-center gap-2.5 text-sm text-text-secondary">
                       <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
