@@ -9,7 +9,7 @@ export const siteConfig = {
   phoneDisplay: '01 62 34 34 62',
   email: 'support@cashmonetik.fr',
   description: 'Solutions monétiques pour commerces de proximité',
-  address: { city: 'Paris', country: 'FR' },
+  address: { street: '8 rue de l\'Est', city: 'Boulogne-Billancourt', zip: '92100', country: 'FR' },
   hours: 'Lun-Ven 9h-18h',
 };
 
@@ -45,9 +45,9 @@ export const trustBadges = [
 export const clientLogos = [
   { src: '/assets/client-spar.svg', alt: 'Spar' },
   { src: '/assets/client-parisistanbul.png', alt: 'Paris Istanbul' },
-  { src: '/assets/client-europrimeurs.jpg', alt: 'Euro Primeurs' },
-  { src: '/assets/client-franprix.jpeg', alt: 'Franprix' },
-  { src: '/assets/client-aubrazier.png', alt: 'Au Brazier' },
+  { src: '/assets/client-europrimeurs.webp', alt: 'Euro Primeurs' },
+  { src: '/assets/client-franprix.webp', alt: 'Franprix' },
+  { src: '/assets/client-aubrazier.webp', alt: 'Au Brazier' },
 ];
 
 export const problems = [
@@ -81,7 +81,7 @@ export const solutions = [
   {
     title: 'Caisses automatiques',
     description: 'Monnayeurs automatiques pour sécuriser et accélérer tous vos encaissements.',
-    image: '/assets/caisse-auto.png',
+    image: '/assets/caisse-auto.webp',
     features: ['Comptage automatique des espèces', 'Rendu de monnaie intelligent', 'Sécurisation totale des fonds'],
     badge: 'Populaire',
     featured: true,
@@ -95,19 +95,19 @@ export const solutions = [
   {
     title: 'Caisses tactiles',
     description: 'Points de vente nouvelle génération, compatibles avec tous les paiements.',
-    image: '/assets/caisse-tactile.png',
+    image: '/assets/caisse-tactile.webp',
     features: ['Écran tactile HD', 'Logiciel de caisse intégré', 'Compatible tous paiements'],
   },
   {
     title: 'Balances professionnelles',
     description: 'Pesage intelligent avec écran tactile et impression ticket intégrée.',
-    image: '/assets/balance.png',
+    image: '/assets/balance.webp',
     features: ['Écran tactile intuitif', 'Impression ticket intégrée', 'Gestion produits simplifiée'],
   },
   {
     title: 'Robot Sparkoz',
     description: 'Robot de nettoyage autonome de dernière génération pour vos locaux.',
-    image: '/assets/robot-sparkoz.png',
+    image: '/assets/robot-sparkoz.webp',
     features: ["8h d'autonomie", 'Couverture 2000m²', 'Navigation LiDAR'],
     badge: 'Nouveau',
     badgeColor: 'green' as const,
@@ -242,21 +242,21 @@ export const showcaseData = [
   {
     title: 'Cafés & Restaurants',
     description: "Solutions d'encaissement modernes pour optimiser votre service client et sécuriser vos transactions.",
-    image: '/assets/showcase-cafe.jpg',
+    image: '/assets/showcase-cafe.webp',
     navTitle: 'CAFÉS & RESTAURANTS',
     navDesc: 'Encaissement moderne',
   },
   {
     title: 'Tabacs & Presse',
     description: 'Équipements adaptés aux contraintes réglementaires avec traçabilité complète et sécurité renforcée.',
-    image: '/assets/showcase-tabac.jpg',
+    image: '/assets/showcase-tabac.webp',
     navTitle: 'TABACS & PRESSE',
     navDesc: 'Conformité & sécurité',
   },
   {
     title: 'Boulangeries',
     description: 'Caisses tactiles et monnayeurs automatiques pour fluidifier le service aux heures de pointe.',
-    image: '/assets/showcase-boulangerie.jpg',
+    image: '/assets/showcase-boulangerie.webp',
     navTitle: 'BOULANGERIES',
     navDesc: 'Rapidité & efficacité',
   },
@@ -268,7 +268,7 @@ export const catalogueProducts = [
     title: 'Caisse automatique',
     subtitle: 'Monnayeur automatique nouvelle génération',
     description: 'Sécurisez et accélérez tous vos encaissements avec notre monnayeur automatique. Comptage instantané, rendu de monnaie intelligent et sécurisation totale de vos fonds de caisse.',
-    image: '/assets/caisse-auto.png',
+    image: '/assets/caisse-auto.webp',
     badge: 'Best-seller',
     features: [
       'Accepte billets et pièces',
@@ -299,7 +299,7 @@ export const catalogueProducts = [
     title: 'Caisse tactile',
     subtitle: 'Point de vente tout-en-un',
     description: 'La caisse enregistreuse nouvelle génération. Écran tactile HD, logiciel intégré et compatibilité avec tous les moyens de paiement.',
-    image: '/assets/caisse-tactile.png',
+    image: '/assets/caisse-tactile.webp',
     features: [
       'Écran tactile 15.6" Full HD',
       'Logiciel de caisse intégré',
@@ -314,7 +314,7 @@ export const catalogueProducts = [
     title: 'Balance professionnelle',
     subtitle: 'Pesage intelligent connecté',
     description: 'Balance professionnelle avec écran tactile intuitif et impression ticket intégrée. Idéale pour les boulangeries, primeurs et traiteurs.',
-    image: '/assets/balance.png',
+    image: '/assets/balance.webp',
     features: [
       'Précision 1g',
       'Écran tactile couleur',
@@ -329,7 +329,7 @@ export const catalogueProducts = [
     title: 'Robot Sparkoz',
     subtitle: 'Robot de nettoyage autonome',
     description: "Le robot de nettoyage professionnel dernière génération. Navigation LiDAR, 8h d'autonomie et couverture de 2000m². L'avenir de l'entretien de vos locaux.",
-    image: '/assets/robot-sparkoz.png',
+    image: '/assets/robot-sparkoz.webp',
     badge: 'Nouveau',
     badgeColor: 'green' as const,
     features: [
@@ -464,6 +464,5 @@ export const footerLinks = {
   legal: [
     { label: 'Mentions légales', href: '/mentions-legales' },
     { label: 'Confidentialité', href: '/politique-confidentialite' },
-    { label: 'CGV', href: '/cgv' },
   ],
 };

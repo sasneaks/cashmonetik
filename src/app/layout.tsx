@@ -46,14 +46,14 @@ export const metadata: Metadata = {
     title: 'CashMonetik | Solutions monétiques nouvelle génération',
     description:
       "Caisses automatiques, bornes de commande et robots de nettoyage. Installation sous 48h pour les commerces de proximité.",
-    images: [{ url: '/assets/logo-cashmonetik.png' }],
+    images: [{ url: '/assets/logo-cashmonetik.webp' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'CashMonetik | Solutions monétiques nouvelle génération',
     description:
       "Caisses automatiques, bornes de commande et robots de nettoyage. Installation sous 48h.",
-    images: ['/assets/logo-cashmonetik.png'],
+    images: ['/assets/logo-cashmonetik.webp'],
   },
   icons: {
     icon: [
@@ -89,13 +89,15 @@ export default function RootLayout({
               email: 'support@cashmonetik.fr',
               address: {
                 '@type': 'PostalAddress',
-                addressLocality: 'Paris',
+                streetAddress: '8 rue de l\'Est',
+                postalCode: '92100',
+                addressLocality: 'Boulogne-Billancourt',
                 addressCountry: 'FR',
               },
               geo: {
                 '@type': 'GeoCoordinates',
-                latitude: 48.8566,
-                longitude: 2.3522,
+                latitude: 48.8352,
+                longitude: 2.2407,
               },
               openingHours: 'Mo-Fr 09:00-18:00',
               aggregateRating: {

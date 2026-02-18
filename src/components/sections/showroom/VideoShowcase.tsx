@@ -29,8 +29,7 @@ export function VideoShowcase() {
             className="w-full aspect-video object-cover"
             poster=""
           >
-            <source src="/assets/about-video.mov" type="video/quicktime" />
-            <source src="/assets/about-video.mov" type="video/mp4" />
+            <source src="/assets/about-video.mp4" type="video/mp4" />
             Votre navigateur ne supporte pas la lecture vidéo.
           </video>
         </motion.div>

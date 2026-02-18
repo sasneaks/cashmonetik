@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/cgv', '/mentions-legales', '/politique-confidentialite'],
+        disallow: ['/mentions-legales', '/politique-confidentialite'],
       },
     ],
     sitemap: 'https://cashmonetik.fr/sitemap.xml',

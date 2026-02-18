@@ -30,7 +30,7 @@ export function Header() {
       >
         <div className="w-full max-w-container mx-auto px-6 flex items-center justify-between">
           <Link href="/" className="flex-shrink-0" aria-label="CashMonetik - Accueil">
-            <Image src="/assets/logo-cashmonetik.png" alt="CashMonetik" width={220} height={77} className="h-14 w-auto" priority />
+            <Image src="/assets/logo-cashmonetik.webp" alt="CashMonetik" width={220} height={77} className="h-14 w-auto" priority />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-10" aria-label="Navigation principale">

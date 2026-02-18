@@ -11,7 +11,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <Link href="/" className="inline-block mb-4">
-              <Image src="/assets/logo-cashmonetik.png" alt="CashMonetik" width={200} height={70} className="h-12 w-auto" />
+              <Image src="/assets/logo-cashmonetik.webp" alt="CashMonetik" width={200} height={70} className="h-12 w-auto" />
             </Link>
             <p className="text-sm text-text-tertiary leading-relaxed max-w-[280px] mb-6">
               Solutions monétiques innovantes pour les commerces de proximité.
