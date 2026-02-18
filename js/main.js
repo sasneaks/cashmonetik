@@ -129,8 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 submitBtn.disabled = false;
                 submitBtn.style.opacity = '1';
                 contactForm.reset();
-                showNotification('Votre demande a été envoyée. Nous vous recontacterons sous 48h.', 'success');
-                console.log('Form data:', data);
+                showNotification('Votre demande a été envoyée. Nous vous recontacterons rapidement.', 'success');
             }, 1500);
         });
     }
