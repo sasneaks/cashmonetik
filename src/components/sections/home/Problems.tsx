@@ -35,7 +35,7 @@ export function Problems() {
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
           variants={staggerContainer}
-          className="grid grid-cols-4 max-lg:grid-cols-2 gap-5 max-sm:gap-3"
+          className="grid grid-cols-5 max-lg:grid-cols-2 gap-5 max-sm:gap-3"
         >
           {problems.map((problem, i) => {
             const Icon = iconMap[problem.icon];
