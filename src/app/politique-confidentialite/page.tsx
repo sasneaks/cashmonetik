@@ -24,8 +24,8 @@ export default function PolitiqueConfidentialitePage() {
 
       <h2 className="font-display text-2xl font-bold mt-12 mb-6">2. Responsable du traitement</h2>
       <p className="text-text-secondary leading-[1.8] mb-4">
-        <strong className="text-text">CashMonetik SAS</strong><br />
-        Adresse : Paris, France<br />
+        <strong className="text-text">CASH MONETIK SASU</strong><br />
+        Adresse : 8 rue de l&apos;Est, 92100 Boulogne-Billancourt<br />
         Email : support@cashmonetik.fr<br />
         T&eacute;l&eacute;phone : 01 62 34 34 62
       </p>
@@ -68,7 +68,7 @@ export default function PolitiqueConfidentialitePage() {
       </p>
       <ul className="list-disc ml-6 text-text-secondary leading-[1.8] mb-4">
         <li>Par email : support@cashmonetik.fr</li>
-        <li>Par courrier : CashMonetik, Paris, France</li>
+        <li>Par courrier : CASH MONETIK, 8 rue de l&apos;Est, 92100 Boulogne-Billancourt</li>
       </ul>
       <p className="text-text-secondary leading-[1.8] mb-4">
         En cas de difficult&eacute;, vous pouvez saisir la CNIL (www.cnil.fr).
@@ -93,7 +93,7 @@ export default function PolitiqueConfidentialitePage() {
       <ul className="list-disc ml-6 text-text-secondary leading-[1.8] mb-4">
         <li>Email : support@cashmonetik.fr</li>
         <li>T&eacute;l&eacute;phone : 01 62 34 34 62</li>
-        <li>Adresse : Paris, France</li>
+        <li>Adresse : 8 rue de l&apos;Est, 92100 Boulogne-Billancourt</li>
       </ul>
     </div>
   );
