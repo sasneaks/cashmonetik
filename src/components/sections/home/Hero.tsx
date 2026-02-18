@@ -210,9 +210,9 @@ export function Hero() {
             {/* Heading */}
             <div ref={headingRef}>
               <h1 className="font-display text-[clamp(2.2rem,4.8vw,3.8rem)] font-extrabold leading-[1.08] tracking-[-0.03em] mb-2">
-                Automatisez vos{' '}
-                <br className="max-md:hidden" />
-                <span className="text-primary">
+                Automatisez vos
+                <br />
+                <span className="text-primary inline-block min-h-[1.15em]">
                   {text}
                   <span
                     className={`inline-block w-[2px] h-[0.75em] bg-primary ml-0.5 align-middle transition-opacity duration-100 ${
