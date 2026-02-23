@@ -77,7 +77,7 @@ export const problems = [
   },
   {
     stat: 'Image pro',
-    title: 'Image de marque',
+    title: 'Image de marque & hygiène',
     description: "Un monnayeur automatique, c'est une technologie moderne et pratique au service de votre commerce. Moins de manipulation de billets, plus d'hygiène pour tous, et une image professionnelle qui inspire confiance à vos clients.",
     icon: 'shield' as const,
   },
