@@ -53,7 +53,7 @@ export const clientLogos = [
 export const problems = [
   {
     stat: '2% du CA cash',
-    title: 'Erreurs de caisse\n(vols, pertes et oublis)',
+    title: 'Démarque inconnue\n(vols, pertes et oublis)',
     description: "La démarque inconnue est le fléau silencieux du commerce : écarts de caisse inexpliqués, billets égarés, rendus erronés… Ces pertes invisibles grignotent en moyenne 2% de votre CA cash, jour après jour.",
     icon: 'alertCircle' as const,
   },
@@ -70,15 +70,15 @@ export const problems = [
     icon: 'clipboard' as const,
   },
   {
-    stat: '1re source de perte',
-    title: 'Sécurité de vos espèces',
-    description: 'Démarque inconnue, vols et oublis fragilisent votre rentabilité. Un coffre sécurisé protège chaque euro. L\'argent transporte jusqu\'à 3 000 bactéries par billet.',
+    stat: 'Perte n°1',
+    title: 'Pas de coffre = cible facile',
+    description: "Sans coffre-fort, votre commerce est une cible. Un monnayeur sécurisé visible en caisse envoie un signal clair aux voleurs : ici, l'argent est inaccessible. Dissuadez les tentatives de vol avant qu'elles n'arrivent.",
     icon: 'lockOpen' as const,
   },
   {
-    stat: 'Effet dissuasif',
-    title: 'Pas de coffre = cible facile',
-    description: "Sans coffre-fort, votre commerce est une cible. Un monnayeur sécurisé visible en caisse envoie un signal clair aux voleurs : ici, l'argent est inaccessible. Dissuadez les tentatives de vol et braquages avant qu'ils n'arrivent. Et côté hygiène, l'argent liquide transporte jusqu'à 3 000 bactéries par billet : limiter la manipulation, c'est protéger vos équipes.",
+    stat: 'Image pro',
+    title: 'Image de marque',
+    description: "Un monnayeur automatique, c'est une technologie moderne et pratique au service de votre commerce. Moins de manipulation de billets, plus d'hygiène pour tous, et une image professionnelle qui inspire confiance à vos clients.",
     icon: 'shield' as const,
   },
 ];
