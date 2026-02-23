@@ -163,7 +163,7 @@ function Magnetic({
 
 /* ─── Social proof ─── */
 const proofItems = [
-  { target: 500, suffix: '+', label: 'commerces équipés' },
+  { target: 300, suffix: '+', label: 'commerces équipés' },
   { target: 98, suffix: '%', label: 'clients satisfaits' },
   { target: 48, suffix: 'h', label: "d'installation" },
 ];

@@ -30,7 +30,7 @@ export const heroTypedStrings = [
 ];
 
 export const socialProof = [
-  { value: '500+', label: 'commerces équipés' },
+  { value: '300+', label: 'commerces équipés' },
   { value: '98%', label: 'clients satisfaits' },
   { value: 'Rapide', label: 'installation' },
 ];
@@ -145,7 +145,7 @@ export const howItWorks = [
 ];
 
 export const stats = [
-  { value: 500, suffix: '+', label: 'Commerces équipés' },
+  { value: 300, suffix: '+', label: 'Commerces équipés' },
   { value: 98, suffix: '%', label: 'Clients satisfaits' },
   { value: 48, suffix: 'h', label: "Délai d'installation" },
   { value: 24, suffix: '/7', label: 'Support technique' },
