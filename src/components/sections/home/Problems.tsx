@@ -57,7 +57,7 @@ export function Problems() {
                   </span>
                 </div>
 
-                <h3 className="font-display text-base max-sm:text-sm font-bold mb-2 max-sm:mb-1">{problem.title}</h3>
+                <h3 className="font-display text-base max-sm:text-sm font-bold mb-2 max-sm:mb-1 whitespace-pre-line">{problem.title}</h3>
                 <p className="text-sm max-sm:text-xs text-text-secondary leading-relaxed">{problem.description}</p>
               </motion.div>
             );

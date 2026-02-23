@@ -53,8 +53,8 @@ export const clientLogos = [
 export const problems = [
   {
     stat: '2% du CA cash',
-    title: 'Erreurs de caisse',
-    description: "Les erreurs manuelles coûtent en moyenne 2% de votre chiffre d'affaires cash. Chaque euro mal compté est un euro perdu.",
+    title: 'Erreurs de caisse\n(vols, pertes et oublis)',
+    description: "La démarque inconnue est le fléau silencieux du commerce : écarts de caisse inexpliqués, billets égarés, rendus erronés… Ces pertes invisibles grignotent en moyenne 2% de votre CA cash, jour après jour.",
     icon: 'alertCircle' as const,
   },
   {
@@ -76,9 +76,9 @@ export const problems = [
     icon: 'lockOpen' as const,
   },
   {
-    stat: 'Image pro',
-    title: 'Image de marque',
-    description: 'Un équipement moderne contribue à votre image de marque. Vos clients perçoivent un commerce professionnel, innovant et digne de confiance.',
+    stat: 'Effet dissuasif',
+    title: 'Pas de coffre = cible facile',
+    description: "Sans coffre-fort, votre commerce est une cible. Un monnayeur sécurisé visible en caisse envoie un signal clair aux voleurs : ici, l'argent est inaccessible. Dissuadez les tentatives de vol et braquages avant qu'ils n'arrivent. Et côté hygiène, l'argent liquide transporte jusqu'à 3 000 bactéries par billet : limiter la manipulation, c'est protéger vos équipes.",
     icon: 'shield' as const,
   },
 ];
