@@ -70,9 +70,9 @@ export const problems = [
     icon: 'clipboard' as const,
   },
   {
-    stat: 'Perte n°1',
-    title: 'Pas de coffre = cible facile',
-    description: "Sans coffre-fort, votre commerce est une cible. Un monnayeur sécurisé visible en caisse envoie un signal clair aux voleurs : ici, l'argent est inaccessible. Dissuadez les tentatives de vol avant qu'elles n'arrivent.",
+    stat: 'Anti-vol',
+    title: 'Sécurité de vos espèces',
+    description: "Un coffre-fort intégré protège chaque euro encaissé. L'argent est inaccessible, la dissuasion est immédiate : les tentatives de vol et braquages chutent face à un équipement sécurisé visible en caisse.",
     icon: 'lockOpen' as const,
   },
   {
