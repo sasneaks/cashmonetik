@@ -167,7 +167,7 @@ export function ContactForm() {
                     Message envoyé !
                   </h3>
                   <p className="text-text-secondary text-sm">
-                    Nous vous recontactons sous 2h ouvrées.
+                    Nous vous recontactons au plus vite.
                   </p>
                 </div>
               ) : (
@@ -304,7 +304,7 @@ export function ContactForm() {
                   {/* Response time badge */}
                   <p className="flex items-center justify-center gap-2 text-xs text-text-tertiary mt-1">
                     <span className="inline-block w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-                    Réponse sous 2h ouvrées
+                    Réponse rapide garantie
                   </p>
                 </form>
               )}

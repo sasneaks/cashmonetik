@@ -184,7 +184,7 @@ exports.handler = async (event) => {
 
               <p>Nous avons bien reçu votre demande de contact et nous vous en remercions.</p>
 
-              <p>Notre équipe commerciale va étudier votre projet et vous recontacter dans les <strong>24 heures</strong> pour vous proposer une solution adaptée à vos besoins.</p>
+              <p>Notre équipe commerciale va étudier votre projet et vous recontacter <strong>au plus vite</strong> pour vous proposer une solution adaptée à vos besoins.</p>
 
               <div class="info-box">
                 <strong>Récapitulatif de votre demande :</strong>
@@ -278,7 +278,7 @@ exports.handler = async (event) => {
               </div>
 
               <p style="margin-top: 25px; color: #666; font-size: 14px;">
-                <strong>Action requise :</strong> Contacter ce prospect dans les 24h pour un taux de conversion optimal.
+                <strong>Action requise :</strong> Contacter ce prospect au plus vite pour un taux de conversion optimal.
               </p>
 
               <a href="mailto:${email}" class="action-button">Répondre au prospect</a>
