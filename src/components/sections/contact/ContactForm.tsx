@@ -67,7 +67,7 @@ export function ContactForm() {
     (window as unknown as Record<string, unknown>).onTurnstileLoad = () => {
       if (turnstileRef.current && window.turnstile) {
         widgetIdRef.current = window.turnstile.render(turnstileRef.current, {
-          sitekey: '0x4AAAAAACjOhSXqCUZdwxMH',
+          sitekey: '0x4AAAAAACjOhSXqCUZdwxMH2A67pkiCSzY',
           theme: 'dark',
           size: 'flexible',
           callback: (token: string) => setTurnstileToken(token),
