@@ -271,7 +271,8 @@ exports.handler = async (event) => {
       headers,
       body: JSON.stringify({
         success: false,
-        error: 'Une erreur est survenue. Veuillez réessayer.'
+        error: 'Une erreur est survenue. Veuillez réessayer.',
+        debug: error.message || String(error)
       })
     };
   }
