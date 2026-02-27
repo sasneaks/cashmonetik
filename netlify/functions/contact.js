@@ -2,6 +2,9 @@ const { Resend } = require('resend');
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Cloudflare Turnstile secret key
+const TURNSTILE_SECRET = process.env.TURNSTILE_SECRET_KEY;
+
 // Allowed sectors (whitelist)
 const VALID_SECTORS = ['boulangerie', 'tabac', 'supermarché', 'pharmacie', 'autre'];
 
@@ -9,6 +12,25 @@ const VALID_SECTORS = ['boulangerie', 'tabac', 'supermarché', 'pharmacie', 'aut
 function sanitize(str) {
   if (typeof str !== 'string') return '';
   return str.replace(/<[^>]*>/g, '').trim();
+}
+
+// Verify Cloudflare Turnstile token
+async function verifyTurnstile(token, ip) {
+  try {
+    const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        secret: TURNSTILE_SECRET,
+        response: token,
+        remoteip: ip
+      })
+    });
+    const data = await res.json();
+    return data.success === true;
+  } catch {
+    return false;
+  }
 }
 
 exports.handler = async (event) => {
@@ -52,7 +74,28 @@ exports.handler = async (event) => {
       };
     }
 
-    // 3. Validate required fields
+    // 3. Turnstile CAPTCHA verification
+    const turnstileToken = body['cf-turnstile-response'];
+    if (!turnstileToken) {
+      return {
+        statusCode: 400,
+        headers,
+        body: JSON.stringify({ success: false, error: 'Veuillez compléter la vérification anti-spam.' })
+      };
+    }
+
+    const clientIP = event.headers['x-forwarded-for'] || event.headers['client-ip'] || '';
+    const turnstileValid = await verifyTurnstile(turnstileToken, clientIP);
+    if (!turnstileValid) {
+      console.warn('Bot detected: Turnstile verification failed');
+      return {
+        statusCode: 403,
+        headers,
+        body: JSON.stringify({ success: false, error: 'Vérification anti-spam échouée. Veuillez réessayer.' })
+      };
+    }
+
+    // 4. Validate required fields
     const name = sanitize(body.name);
     const email = sanitize(body.email);
     const phone = sanitize(body.phone || '');
@@ -67,7 +110,7 @@ exports.handler = async (event) => {
       };
     }
 
-    // 4. Validate email format
+    // 5. Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return {
@@ -77,7 +120,7 @@ exports.handler = async (event) => {
       };
     }
 
-    // 5. Validate sector (whitelist)
+    // 6. Validate sector (whitelist)
     if (!VALID_SECTORS.includes(sector.toLowerCase())) {
       return {
         statusCode: 400,
@@ -86,7 +129,7 @@ exports.handler = async (event) => {
       };
     }
 
-    // 6. Check field lengths (prevent abuse)
+    // 7. Check field lengths (prevent abuse)
     if (name.length > 100 || email.length > 254 || phone.length > 20 || message.length > 5000) {
       return {
         statusCode: 400,
