@@ -41,6 +41,7 @@ interface ButtonProps extends VariantProps<typeof buttonVariants> {
   external?: boolean;
   onClick?: () => void;
   type?: 'button' | 'submit';
+  disabled?: boolean;
 }
 
 export function Button({
@@ -54,6 +55,7 @@ export function Button({
   external,
   onClick,
   type = 'button',
+  disabled,
 }: ButtonProps) {
   const classes = cn(buttonVariants({ variant, size, fullWidth }), className);
 
@@ -82,7 +84,7 @@ export function Button({
   }
 
   return (
-    <button type={type} className={classes} onClick={onClick}>
+    <button type={type} className={cn(classes, disabled && 'opacity-50 pointer-events-none')} onClick={onClick} disabled={disabled}>
       {content}
     </button>
   );

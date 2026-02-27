@@ -42,6 +42,46 @@ const inputClasses =
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState('');
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSending(true);
+    setError('');
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const data = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      phone: formData.get('phone') as string,
+      sector: formData.get('sector') as string,
+      message: formData.get('message') as string,
+      timestamp: formData.get('timestamp') as string,
+    };
+
+    try {
+      const response = await fetch('/.netlify/functions/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        setError(result.error || 'Une erreur est survenue. Veuillez réessayer.');
+      }
+    } catch {
+      setError('Impossible d\'envoyer le message. Vérifiez votre connexion.');
+    } finally {
+      setSending(false);
+    }
+  }
 
   return (
     <section className="py-16 max-md:py-10">
@@ -122,21 +162,19 @@ export function ContactForm() {
                 </div>
               ) : (
                 <form
-                  action="https://formsubmit.co/support@cashmonetik.fr"
-                  method="POST"
-                  onSubmit={() => setSubmitted(true)}
+                  onSubmit={handleSubmit}
                   className="space-y-5"
                 >
                   {/* Honeypot */}
                   <div style={{ display: 'none' }}>
-                    <input type="text" name="_honey" />
+                    <input type="text" name="website" />
                   </div>
+                  {/* Timestamp anti-bot */}
                   <input
                     type="hidden"
-                    name="_next"
-                    value="https://cashmonetik.fr/contact?success=true"
+                    name="timestamp"
+                    value={Date.now().toString()}
                   />
-                  <input type="hidden" name="_captcha" value="false" />
 
                   {/* Name */}
                   <div>
@@ -235,9 +273,14 @@ export function ContactForm() {
                     />
                   </div>
 
+                  {/* Error message */}
+                  {error && (
+                    <p className="text-red-400 text-sm text-center">{error}</p>
+                  )}
+
                   {/* Submit */}
-                  <Button type="submit" variant="primary" size="lg" fullWidth arrow>
-                    Envoyer le message
+                  <Button type="submit" variant="primary" size="lg" fullWidth arrow disabled={sending}>
+                    {sending ? 'Envoi en cours...' : 'Envoyer le message'}
                   </Button>
 
                   {/* Response time badge */}
