@@ -286,7 +286,7 @@ export function ContactForm() {
                   {/* Cloudflare Turnstile - implicit rendering */}
                   <div
                     className="cf-turnstile flex justify-center"
-                    data-sitekey="0x4AAAAAACjOhSXqCUZdwxMH2A67pkiCSzY"
+                    data-sitekey="0x4AAAAAACjOhferMbRGi5XU"
                     data-theme="dark"
                     data-size="flexible"
                   />
