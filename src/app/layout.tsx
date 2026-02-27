@@ -75,6 +75,7 @@ export default function RootLayout({
     <html lang="fr" className={`${inter.variable} ${plusJakarta.variable}`}>
       <head>
         <meta name="theme-color" content="#0a0a0f" />
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

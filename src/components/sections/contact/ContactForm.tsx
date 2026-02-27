@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, Clock } from 'lucide-react';
 import { fadeUp, staggerContainer } from '@/lib/animations';
@@ -8,15 +8,6 @@ import { siteConfig } from '@/lib/content';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
 import { cn } from '@/lib/utils';
-
-declare global {
-  interface Window {
-    turnstile?: {
-      render: (container: string | HTMLElement, options: Record<string, unknown>) => string;
-      reset: (widgetId: string) => void;
-    };
-  }
-}
 
 const contactItems = [
   {
@@ -53,49 +44,23 @@ export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState('');
-  const [turnstileToken, setTurnstileToken] = useState('');
-  const turnstileRef = useRef<HTMLDivElement>(null);
-  const widgetIdRef = useRef<string | null>(null);
   const [formTimestamp] = useState(() => Date.now().toString());
-
-  useEffect(() => {
-    // Load Turnstile script
-    const script = document.createElement('script');
-    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onTurnstileLoad';
-    script.async = true;
-
-    (window as unknown as Record<string, unknown>).onTurnstileLoad = () => {
-      if (turnstileRef.current && window.turnstile) {
-        widgetIdRef.current = window.turnstile.render(turnstileRef.current, {
-          sitekey: '0x4AAAAAACjOhSXqCUZdwxMH2A67pkiCSzY',
-          theme: 'dark',
-          size: 'flexible',
-          callback: (token: string) => setTurnstileToken(token),
-          'expired-callback': () => setTurnstileToken(''),
-        });
-      }
-    };
-
-    document.head.appendChild(script);
-    return () => {
-      script.remove();
-      delete (window as unknown as Record<string, unknown>).onTurnstileLoad;
-    };
-  }, []);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-
-    if (!turnstileToken) {
-      setError('Veuillez compléter la vérification anti-spam.');
-      return;
-    }
-
     setSending(true);
     setError('');
 
     const form = e.currentTarget;
     const formData = new FormData(form);
+
+    // Get Turnstile token from the implicit widget
+    const turnstileToken = formData.get('cf-turnstile-response') as string;
+    if (!turnstileToken) {
+      setError('Veuillez compléter la vérification anti-spam.');
+      setSending(false);
+      return;
+    }
 
     const data = {
       name: formData.get('name') as string,
@@ -120,11 +85,6 @@ export function ContactForm() {
         setSubmitted(true);
       } else {
         setError(result.error || 'Une erreur est survenue. Veuillez réessayer.');
-        // Reset Turnstile on error
-        if (widgetIdRef.current && window.turnstile) {
-          window.turnstile.reset(widgetIdRef.current);
-          setTurnstileToken('');
-        }
       }
     } catch {
       setError('Impossible d\'envoyer le message. Vérifiez votre connexion.');
@@ -323,8 +283,13 @@ export function ContactForm() {
                     />
                   </div>
 
-                  {/* Cloudflare Turnstile */}
-                  <div ref={turnstileRef} className="flex justify-center" />
+                  {/* Cloudflare Turnstile - implicit rendering */}
+                  <div
+                    className="cf-turnstile flex justify-center"
+                    data-sitekey="0x4AAAAAACjOhSXqCUZdwxMH2A67pkiCSzY"
+                    data-theme="dark"
+                    data-size="flexible"
+                  />
 
                   {/* Error message */}
                   {error && (
