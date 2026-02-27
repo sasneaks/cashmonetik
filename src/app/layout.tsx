@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -75,7 +76,6 @@ export default function RootLayout({
     <html lang="fr" className={`${inter.variable} ${plusJakarta.variable}`}>
       <head>
         <meta name="theme-color" content="#0a0a0f" />
-        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -120,6 +120,10 @@ export default function RootLayout({
           <Chatbot />
           <CookieBanner />
         </ChatbotProvider>
+        <Script
+          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
