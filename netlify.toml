@@ -1,6 +1,5 @@
 [build]
-  command = "npm run build"
-  publish = "out"
+  publish = "."
 
 # ──────────────────────────────────────────────
 # Security headers (all pages)
