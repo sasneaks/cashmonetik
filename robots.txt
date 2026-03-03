@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Sitemap: https://cashmonetik.fr/sitemap.xml
+
+# Bloquer les anciens fichiers et répertoires
+User-agent: *
+Disallow: /app-old-nextjs/
+Disallow: /index-old-onepage.html
