@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { PageHero } from '@/components/ui/PageHero';
 import { Showcase } from '@/components/sections/secteurs/Showcase';
-import { SectorCards } from '@/components/sections/secteurs/SectorCards';
 import { CtaFinal } from '@/components/sections/home/CtaFinal';
 
 export const metadata: Metadata = {
@@ -17,13 +16,12 @@ export default function SecteursPage() {
         tag="Secteurs"
         title={
           <>
-            Des solutions pour <span className="text-primary">chaque métier</span>
+            Des solutions adaptées à <span className="text-primary">chaque métier</span>
           </>
         }
         subtitle="Nos équipements s'adaptent aux spécificités de votre secteur d'activité."
       />
       <Showcase />
-      <SectorCards />
       <CtaFinal />
     </>
   );

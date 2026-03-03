@@ -86,7 +86,7 @@ export default function RootLayout({
               description:
                 'Solutions monétiques pour commerces de proximité : caisses automatiques, bornes de commande, robots de nettoyage',
               url: 'https://cashmonetik.fr',
-              telephone: '+33162343462',
+              telephone: '+33668001030',
               email: 'support@cashmonetik.fr',
               address: {
                 '@type': 'PostalAddress',

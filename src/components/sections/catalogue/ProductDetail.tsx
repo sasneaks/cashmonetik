@@ -1,106 +1,78 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { fadeUp } from '@/lib/animations';
+import { ArrowRight } from 'lucide-react';
+import { fadeUp, staggerContainer } from '@/lib/animations';
 import { catalogueProducts } from '@/lib/content';
 import { Container } from '@/components/ui/Container';
-import { Button } from '@/components/ui/Button';
 import { cn } from '@/lib/utils';
 
 export function ProductDetail() {
   return (
     <section className="py-16 max-md:py-10">
       <Container>
-        <div className="space-y-0">
-          {catalogueProducts.map((product, index) => {
-            const isOdd = index % 2 === 0;
-
-            return (
-              <div key={product.id} id={product.id} className="scroll-mt-[140px]">
-                <motion.div
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: '-80px' }}
-                  className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center py-14 max-md:py-8"
-                >
-                  {/* Image */}
-                  <motion.div
-                    variants={fadeUp}
-                    custom={isOdd ? 0 : 0.15}
-                    className={cn(
-                      'relative flex items-center justify-center',
-                      !isOdd && 'lg:order-2'
-                    )}
-                  >
-                    <div className="relative w-full max-w-[480px] mx-auto">
-                      {product.badge && (
-                        <span
-                          className={cn(
-                            'absolute top-4 left-4 z-10 inline-flex items-center gap-1.5 font-display text-[11px] font-bold uppercase tracking-[0.1em] px-3 py-1 rounded-full',
-                            product.badgeColor === 'green'
-                              ? 'bg-[rgba(34,197,94,0.12)] text-green-400 border border-[rgba(34,197,94,0.25)]'
-                              : 'bg-[rgba(59,130,246,0.12)] text-primary border border-[rgba(59,130,246,0.25)]'
-                          )}
-                        >
-                          {product.badge}
-                        </span>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-50px' }}
+          variants={staggerContainer}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {catalogueProducts.map((product) => (
+            <motion.div
+              key={product.id}
+              variants={fadeUp}
+              className="group"
+            >
+              <Link
+                href={product.slug}
+                className="block bg-bg-card backdrop-blur-sm border border-border rounded-md overflow-hidden transition-all duration-500 hover:border-border-hover hover:-translate-y-1 h-full flex flex-col"
+              >
+                {/* Image */}
+                <div className="relative w-full h-[220px] max-sm:h-[160px] bg-bg-elevated flex items-center justify-center overflow-hidden">
+                  {product.badge && (
+                    <span
+                      className={cn(
+                        'absolute top-3 right-3 z-10 inline-flex items-center px-3 py-1 text-[11px] font-display font-bold rounded-full',
+                        product.badgeColor === 'green'
+                          ? 'text-emerald-400 bg-[rgba(52,211,153,0.1)] border border-[rgba(52,211,153,0.2)]'
+                          : 'text-primary bg-[rgba(59,130,246,0.1)] border border-[rgba(59,130,246,0.2)]'
                       )}
-                      <div className="bg-bg-card border border-border rounded-lg p-8 flex items-center justify-center aspect-square">
-                        <Image
-                          src={product.image}
-                          alt={product.title}
-                          width={400}
-                          height={400}
-                          className="object-contain w-full h-full max-h-[360px]"
-                        />
-                      </div>
-                    </div>
-                  </motion.div>
+                    >
+                      {product.badge}
+                    </span>
+                  )}
+                  <Image
+                    src={product.image}
+                    alt={product.title}
+                    fill
+                    className="object-contain p-6 group-hover:scale-105 transition-transform duration-700 ease-out-custom"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
 
-                  {/* Content */}
-                  <motion.div
-                    variants={fadeUp}
-                    custom={isOdd ? 0.15 : 0}
-                    className={cn(!isOdd && 'lg:order-1')}
-                  >
-                    <h3 className="font-display text-[clamp(1.5rem,3vw,2.2rem)] font-extrabold tracking-[-0.02em] leading-[1.15] mb-2">
-                      {product.title}
-                    </h3>
-                    <p className="text-sm font-display font-semibold text-primary mb-4">
-                      {product.subtitle}
-                    </p>
-                    <p className="text-text-secondary text-base leading-relaxed mb-8">
-                      {product.description}
-                    </p>
-
-                    {/* Features grid */}
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 mb-8">
-                      {product.features.map((feature) => (
-                        <li
-                          key={feature}
-                          className="flex items-start gap-2.5 text-sm text-text-secondary"
-                        >
-                          <span className="w-1.5 h-1.5 rounded-full bg-primary mt-[7px] flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-
-                    <Button href="/contact" variant="primary" size="default" arrow>
-                      Demander un devis
-                    </Button>
-                  </motion.div>
-                </motion.div>
-
-                {/* Divider */}
-                {index < catalogueProducts.length - 1 && (
-                  <div className="border-t border-border" />
-                )}
-              </div>
-            );
-          })}
-        </div>
+                {/* Content */}
+                <div className="p-6 max-sm:p-4 flex flex-col flex-1">
+                  <h3 className="font-display text-lg max-sm:text-base font-bold mb-1">
+                    {product.title}
+                  </h3>
+                  <p className="text-xs font-display font-semibold text-primary mb-3">
+                    {product.subtitle}
+                  </p>
+                  <p className="text-sm text-text-secondary leading-relaxed mb-4 flex-1">
+                    {product.description}
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-sm font-display font-semibold text-primary group-hover:gap-3 transition-all duration-300">
+                    Découvrir
+                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </motion.div>
       </Container>
     </section>
   );

@@ -5,8 +5,8 @@
 export const siteConfig = {
   name: 'CashMonetik',
   url: 'https://cashmonetik.fr',
-  phone: '+33162343462',
-  phoneDisplay: '01 62 34 34 62',
+  phone: '+33668001030',
+  phoneDisplay: '06 68 00 10 30',
   email: 'support@cashmonetik.fr',
   description: 'Solutions monétiques pour commerces de proximité',
   address: { street: '8 rue de l\'Est', city: 'Boulogne-Billancourt', zip: '92100', country: 'FR' },
@@ -91,24 +91,28 @@ export const solutions = [
     features: ['Comptage automatique des espèces', 'Rendu de monnaie intelligent', 'Sécurisation totale des fonds'],
     badge: 'Populaire',
     featured: true,
+    slug: '/caisse-automatique',
   },
   {
     title: 'Bornes de commande',
     description: 'Bornes interactives pour une prise de commande autonome et rapide.',
     image: '/assets/borne-commande.webp',
     features: ['Écran tactile grand format', 'Interface personnalisable', 'Paiement intégré'],
+    slug: '/borne-commande',
   },
   {
     title: 'Caisses tactiles',
     description: 'Points de vente nouvelle génération, compatibles avec tous les paiements.',
     image: '/assets/caisse-tactile.webp',
     features: ['Écran tactile HD', 'Logiciel de caisse intégré', 'Compatible tous paiements'],
+    slug: '/caisse-tactile',
   },
   {
     title: 'Balances professionnelles',
     description: 'Pesage intelligent avec écran tactile et impression ticket intégrée.',
     image: '/assets/balance.webp',
     features: ['Écran tactile intuitif', 'Impression ticket intégrée', 'Gestion produits simplifiée'],
+    slug: '/balance-professionnelle',
   },
   {
     title: 'Robot Sparkoz',
@@ -117,6 +121,7 @@ export const solutions = [
     features: ["8h d'autonomie", 'Couverture 2000m²', 'Navigation LiDAR'],
     badge: 'Nouveau',
     badgeColor: 'green' as const,
+    slug: '/robot-sparkoz',
   },
 ];
 
@@ -198,7 +203,7 @@ export const sectors = [
 export const faqItems = [
   {
     question: 'Combien coûtent vos solutions ?',
-    answer: "Nos solutions sont disponibles en location ou à l'achat. Le coût dépend de la configuration choisie et de votre secteur d'activité. Contactez-nous pour un devis personnalisé gratuit.",
+    answer: "Nos solutions sont disponibles en location ou à l'achat. Le coût dépend de la configuration choisie et de votre secteur d'activité. Contactez-nous pour une proposition personnalisée gratuite.",
   },
   {
     question: "Quel est le délai d'installation ?",
@@ -231,10 +236,10 @@ export const faqItems = [
 ];
 
 export const chatbotResponses: Record<string, string> = {
-  prix: "Nos solutions sont disponibles en location ou à l'achat. Installation et formation incluses dans tous nos contrats.\n\nPour obtenir un devis personnalisé adapté à votre activité, contactez-nous au 01 62 34 34 62 ou demandez un audit gratuit sur notre page contact !",
+  prix: "Nos solutions sont disponibles en location ou à l'achat. Installation et formation incluses dans tous nos contrats.\n\nPour obtenir une proposition personnalisée adaptée à votre activité, contactez-nous au 06 68 00 10 30 ou demandez un audit gratuit sur notre page contact !",
   installation: "L'installation se fait rapidement ! Notre processus :\n1. Livraison sur site\n2. Installation et configuration\n3. Formation de votre équipe (2h)\n4. Tests et mise en service\n\nTout est inclus dans votre contrat.",
   produits: "Notre gamme complète :\n- Caisses automatiques (monnayeurs)\n- Bornes de commande interactives\n- Caisses tactiles nouvelle génération\n- Balances professionnelles connectées\n- Robot Sparkoz (nettoyage autonome)\n\nChaque solution est personnalisable.",
-  contact: "Contactez notre équipe commerciale :\n- Tél : 01 62 34 34 62\n- Email : support@cashmonetik.fr\n- Horaires : Lun-Ven 9h-18h\n\nOu demandez un audit gratuit sur notre page contact !",
+  contact: "Contactez notre équipe commerciale :\n- Tél : 06 68 00 10 30\n- Email : support@cashmonetik.fr\n- Horaires : Lun-Ven 9h-18h\n\nOu demandez un audit gratuit sur notre page contact !",
 };
 
 export const chatbotQuickReplies = [
@@ -271,6 +276,7 @@ export const showcaseData = [
 export const catalogueProducts = [
   {
     id: 'caisse-automatique',
+    slug: '/caisse-automatique',
     title: 'Caisse automatique',
     subtitle: 'Monnayeur automatique nouvelle génération',
     description: 'Sécurisez et accélérez tous vos encaissements avec notre monnayeur automatique. Comptage instantané, rendu de monnaie intelligent et sécurisation totale de vos fonds de caisse.',
@@ -287,6 +293,7 @@ export const catalogueProducts = [
   },
   {
     id: 'borne-commande',
+    slug: '/borne-commande',
     title: 'Borne de commande',
     subtitle: 'Borne interactive tactile',
     description: 'Offrez à vos clients une expérience de commande autonome, rapide et intuitive. Augmentez votre panier moyen de 20% grâce à la suggestion intelligente.',
@@ -302,6 +309,7 @@ export const catalogueProducts = [
   },
   {
     id: 'caisse-tactile',
+    slug: '/caisse-tactile',
     title: 'Caisse tactile',
     subtitle: 'Point de vente tout-en-un',
     description: 'La caisse enregistreuse nouvelle génération. Écran tactile HD, logiciel intégré et compatibilité avec tous les moyens de paiement.',
@@ -317,6 +325,7 @@ export const catalogueProducts = [
   },
   {
     id: 'balance',
+    slug: '/balance-professionnelle',
     title: 'Balance professionnelle',
     subtitle: 'Pesage intelligent connecté',
     description: 'Balance professionnelle avec écran tactile intuitif et impression ticket intégrée. Idéale pour les boulangeries, primeurs et traiteurs.',
@@ -332,6 +341,7 @@ export const catalogueProducts = [
   },
   {
     id: 'robot-sparkoz',
+    slug: '/robot-sparkoz',
     title: 'Robot Sparkoz',
     subtitle: 'Robot de nettoyage autonome',
     description: "Le robot de nettoyage professionnel dernière génération. Navigation LiDAR, 8h d'autonomie et couverture de 2000m². L'avenir de l'entretien de vos locaux.",

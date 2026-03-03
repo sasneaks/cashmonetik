@@ -5,7 +5,7 @@ import { ContactForm } from '@/components/sections/contact/ContactForm';
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Contactez CashMonetik pour un audit gratuit de votre commerce. Devis personnalisé, installation rapide et support 24/7.',
+    'Contactez CashMonetik pour un audit gratuit de votre commerce. Proposition personnalisée, installation rapide et support 24/7.',
 };
 
 export default function ContactPage() {

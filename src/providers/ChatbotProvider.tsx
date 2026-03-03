@@ -25,7 +25,7 @@ const INITIAL_MESSAGE: Message = {
 };
 
 const DEFAULT_FALLBACK =
-  'Je ne suis pas sûr de comprendre votre demande. Vous pouvez me poser des questions sur nos tarifs, l\'installation, nos produits ou nous contacter directement au 01 62 34 34 62.';
+  'Je ne suis pas sûr de comprendre votre demande. Vous pouvez me poser des questions sur nos tarifs, l\'installation, nos produits ou nous contacter directement au 06 68 00 10 30.';
 
 function detectTopic(input: string): string | null {
   const normalized = input.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');

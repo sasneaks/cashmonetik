@@ -104,8 +104,8 @@ export function Solutions() {
                   ))}
                 </ul>
 
-                <Button href="/contact" variant="outline" size="sm" arrow>
-                  Demander un devis
+                <Button href={solution.slug || '/contact'} variant="outline" size="sm" arrow>
+                  Découvrir
                 </Button>
               </div>
             </motion.div>

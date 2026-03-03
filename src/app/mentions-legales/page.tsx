@@ -35,7 +35,7 @@ export default function MentionsLegalesPage() {
         D&eacute;but d&apos;activit&eacute; : 25/06/2024<br />
         Si&egrave;ge social : 8 rue de l&apos;Est, 92100 Boulogne-Billancourt, France<br />
         Domiciliataire : NOVADOM (SIREN 902 244 870)<br />
-        T&eacute;l&eacute;phone : 01 62 34 34 62<br />
+        T&eacute;l&eacute;phone : 06 68 00 10 30<br />
         Email : support@cashmonetik.fr
       </p>
 
@@ -104,7 +104,7 @@ export default function MentionsLegalesPage() {
       <h2 className="font-display text-2xl font-bold mt-12 mb-6">8. Contact</h2>
       <ul className="list-disc ml-6 text-text-secondary leading-[1.8] mb-4">
         <li>Email : support@cashmonetik.fr</li>
-        <li>T&eacute;l&eacute;phone : 01 62 34 34 62</li>
+        <li>T&eacute;l&eacute;phone : 06 68 00 10 30</li>
         <li>Adresse : 8 rue de l&apos;Est, 92100 Boulogne-Billancourt, France</li>
       </ul>
     </div>

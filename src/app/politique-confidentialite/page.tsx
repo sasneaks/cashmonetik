@@ -27,7 +27,7 @@ export default function PolitiqueConfidentialitePage() {
         <strong className="text-text">CASH MONETIK SASU</strong><br />
         Adresse : 8 rue de l&apos;Est, 92100 Boulogne-Billancourt<br />
         Email : support@cashmonetik.fr<br />
-        T&eacute;l&eacute;phone : 01 62 34 34 62
+        T&eacute;l&eacute;phone : 06 68 00 10 30
       </p>
 
       <h2 className="font-display text-2xl font-bold mt-12 mb-6">3. Donn&eacute;es collect&eacute;es</h2>
@@ -48,7 +48,7 @@ export default function PolitiqueConfidentialitePage() {
 
       <h2 className="font-display text-2xl font-bold mt-12 mb-6">4. Finalit&eacute;s du traitement</h2>
       <ul className="list-disc ml-6 text-text-secondary leading-[1.8] mb-4">
-        <li><strong className="text-text">Gestion commerciale :</strong> traitement de vos demandes de devis, commandes</li>
+        <li><strong className="text-text">Gestion commerciale :</strong> traitement de vos demandes de contact, commandes</li>
         <li><strong className="text-text">Service client :</strong> assistance technique, support, maintenance</li>
         <li><strong className="text-text">Communication :</strong> envoi d&apos;informations sur nos produits (avec consentement)</li>
         <li><strong className="text-text">Am&eacute;lioration :</strong> analyse de l&apos;utilisation de notre site</li>
@@ -92,7 +92,7 @@ export default function PolitiqueConfidentialitePage() {
       <h2 className="font-display text-2xl font-bold mt-12 mb-6">9. Contact</h2>
       <ul className="list-disc ml-6 text-text-secondary leading-[1.8] mb-4">
         <li>Email : support@cashmonetik.fr</li>
-        <li>T&eacute;l&eacute;phone : 01 62 34 34 62</li>
+        <li>T&eacute;l&eacute;phone : 06 68 00 10 30</li>
         <li>Adresse : 8 rue de l&apos;Est, 92100 Boulogne-Billancourt</li>
       </ul>
     </div>

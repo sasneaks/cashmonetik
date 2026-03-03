@@ -239,12 +239,12 @@ export function Hero() {
             <div ref={ctaRef} className="flex items-center gap-4 flex-wrap">
               <Magnetic>
                 <Button href="/contact" variant="primary" size="lg" arrow>
-                  Demander un devis gratuit
+                  Contactez-nous
                 </Button>
               </Magnetic>
-              <Button href="tel:+33162343462" variant="outline" size="lg">
+              <Button href="tel:+33668001030" variant="outline" size="lg">
                 <Phone className="w-4 h-4" />
-                01 62 34 34 62
+                06 68 00 10 30
               </Button>
             </div>
           </div>
