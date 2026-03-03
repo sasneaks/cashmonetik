@@ -199,7 +199,7 @@
 
         const responses = {
             prix: {
-                text: "Nos solutions sont disponibles en location ou a l'achat. Installation et formation incluses dans tous nos contrats.\n\nPour obtenir un devis personnalise adapte a votre activite, contactez-nous au 01 62 34 34 62 ou demandez un audit gratuit sur notre page contact !",
+                text: "Nos solutions sont disponibles en location ou a l'achat. Installation et formation incluses dans tous nos contrats.\n\nPour obtenir une proposition personnalisee adaptee a votre activite, contactez-nous au 06 68 00 10 30 ou demandez un audit gratuit sur notre page contact !",
             },
             installation: {
                 text: "L'installation se fait rapidement ! Notre processus :\n1. Livraison sur site\n2. Installation et configuration\n3. Formation de votre equipe (2h)\n4. Tests et mise en service\n\nTout est inclus dans votre contrat.",
@@ -208,7 +208,7 @@
                 text: "Notre gamme complete :\n- Caisses automatiques (monnayeurs)\n- Bornes de commande interactives\n- Caisses tactiles nouvelle generation\n- Balances professionnelles connectees\n- Robot Sparkoz (nettoyage autonome)\n\nChaque solution est personnalisable.",
             },
             contact: {
-                text: "Contactez notre equipe commerciale :\n- Tel : 01 62 34 34 62\n- Email : commercial@cashmonetik.fr\n- Horaires : Lun-Ven 9h-18h\n\nOu demandez un audit gratuit sur notre page contact !",
+                text: "Contactez notre equipe commerciale :\n- Tel : 06 68 00 10 30\n- Email : commercial@cashmonetik.fr\n- Horaires : Lun-Ven 9h-18h\n\nOu demandez un audit gratuit sur notre page contact !",
             }
         };
 
@@ -256,7 +256,7 @@
                 else if (lower.match(/contact|t[eé]l|mail|appel|conseiller/)) { addMessage(responses.contact.text, true); matched = true; }
 
                 if (!matched) {
-                    addMessage("Merci pour votre message. Pour une reponse personnalisee, n'hesitez pas a nous contacter au 01 62 34 34 62 ou par email a commercial@cashmonetik.fr.", true);
+                    addMessage("Merci pour votre message. Pour une reponse personnalisee, n'hesitez pas a nous contacter au 06 68 00 10 30 ou par email a commercial@cashmonetik.fr.", true);
                 }
             }, 800);
         }

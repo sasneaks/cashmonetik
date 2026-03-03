@@ -1485,6 +1485,569 @@ a.contact-value:hover { color: var(--primary); }
 }
 
 /* ============================================================
+   MACHINE PAGES - DEDICATED PRODUCT PAGES
+   ============================================================ */
+
+/* Machine Hero */
+.machine-hero {
+    position: relative;
+    padding: calc(var(--header-h) + 80px) 0 64px;
+    overflow: hidden;
+}
+.machine-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: radial-gradient(ellipse 70% 80% at 50% 30%, black 20%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 80% at 50% 30%, black 20%, transparent 70%);
+}
+.machine-hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.machine-hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.machine-hero-content h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+.machine-hero-content > p {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 500px;
+}
+.machine-hero-stats {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.machine-hero-stat {
+    text-align: center;
+    padding: 16px 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    min-width: 110px;
+    transition: all 0.3s var(--ease-out);
+}
+.machine-hero-stat:hover {
+    border-color: var(--border-hover);
+    background: var(--bg-card-hover);
+}
+.machine-hero-stat strong {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--primary);
+    display: block;
+}
+.machine-hero-stat span {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    font-weight: 500;
+    margin-top: 2px;
+    display: block;
+}
+.machine-hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-top: 8px;
+}
+.machine-hero-image {
+    position: relative;
+    border-radius: var(--radius-xl);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    padding: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+.machine-hero-image::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.12), transparent 70%);
+    filter: blur(60px);
+    pointer-events: none;
+}
+.machine-hero-image img {
+    max-height: 340px;
+    width: auto;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+    animation: product-float 4s ease-in-out infinite;
+}
+.machine-hero-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 100px;
+    background: var(--primary);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.machine-hero-badge--new {
+    background: #22c55e;
+}
+
+/* Machine Features */
+.machine-features {
+    padding: var(--section-py) 0;
+}
+.machine-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+.machine-feature-card {
+    padding: 32px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    transition: all 0.3s var(--ease-out);
+}
+.machine-feature-card:hover {
+    border-color: var(--border-hover);
+    background: var(--bg-card-hover);
+    transform: translateY(-2px);
+}
+.machine-feature-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background: var(--primary-glow);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+.machine-feature-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.machine-feature-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Machine Specs */
+.machine-specs {
+    padding: var(--section-py) 0;
+    border-top: 1px solid var(--border);
+}
+.machine-specs-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 48px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    margin-top: 48px;
+}
+.machine-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 48px;
+}
+.machine-spec-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+.machine-spec-row:last-child {
+    border-bottom: none;
+}
+.machine-spec-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+.machine-spec-value {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+/* Machine Related / Solutions associées */
+.machine-related {
+    padding: var(--section-py) 0;
+    border-top: 1px solid var(--border);
+}
+.machine-related-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+.machine-related-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px 24px;
+    text-align: center;
+    transition: all 0.3s var(--ease-out);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+}
+.machine-related-card:hover {
+    border-color: var(--border-hover);
+    background: var(--bg-card-hover);
+    transform: translateY(-4px);
+}
+.machine-related-card img {
+    max-height: 120px;
+    width: auto;
+    object-fit: contain;
+}
+.machine-related-card h3 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+}
+.machine-related-card p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* ============================================================
+   SECTORS PAGE - IMMERSIVE REDESIGN
+   ============================================================ */
+
+/* Sector Navigation (sticky) */
+.sector-nav {
+    position: sticky;
+    top: var(--header-h);
+    z-index: 90;
+    background: rgba(10, 10, 15, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
+}
+.sector-nav-inner {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.sector-nav-link {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    transition: all 0.3s var(--ease-out);
+    text-decoration: none;
+}
+.sector-nav-link:hover,
+.sector-nav-link.active {
+    border-color: var(--primary);
+    background: var(--primary-glow);
+    color: var(--primary);
+}
+
+/* Sector Section */
+.sector-section {
+    padding: var(--section-py) 0;
+    border-top: 1px solid var(--border);
+}
+.sector-section-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+.sector-section--reverse .sector-section-inner {
+    direction: rtl;
+}
+.sector-section--reverse .sector-section-inner > * {
+    direction: ltr;
+}
+.sector-section-visual {
+    position: relative;
+    border-radius: var(--radius-xl);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    padding: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 360px;
+    font-size: 6rem;
+}
+.sector-section-visual::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.1), transparent 70%);
+    filter: blur(50px);
+    pointer-events: none;
+}
+.sector-section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sector-section-content h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+.sector-section-content > p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 480px;
+}
+.sector-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.sector-benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+.sector-benefit svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: #22c55e;
+    margin-top: 2px;
+}
+
+/* Sector Pills (machine links) */
+.sector-pills {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.sector-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    transition: all 0.3s var(--ease-out);
+    text-decoration: none;
+}
+.sector-pill:hover {
+    border-color: var(--primary);
+    background: var(--primary-glow);
+    color: var(--primary);
+}
+
+/* Catalogue Product Grid (showcase cards) */
+.catalogue-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+.catalogue-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all 0.3s var(--ease-out);
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+}
+.catalogue-card:hover {
+    border-color: var(--border-hover);
+    background: var(--bg-card-hover);
+    transform: translateY(-4px);
+}
+.catalogue-card-image {
+    position: relative;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+    background: rgba(255,255,255,0.02);
+}
+.catalogue-card-image img {
+    max-height: 160px;
+    width: auto;
+    object-fit: contain;
+}
+.catalogue-card-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 100px;
+    background: var(--primary);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.catalogue-card-badge--new {
+    background: #22c55e;
+}
+.catalogue-card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+.catalogue-card-body h3 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+.catalogue-card-body p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    flex: 1;
+}
+.catalogue-card-footer {
+    padding: 0 24px 24px;
+}
+
+/* ============================================================
+   RESPONSIVE - MACHINE & SECTOR PAGES
+   ============================================================ */
+@media (max-width: 1024px) {
+    .machine-hero-inner {
+        gap: 40px;
+    }
+    .machine-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .machine-related-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .catalogue-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .machine-hero {
+        padding: calc(var(--header-h) + 48px) 0 40px;
+    }
+    .machine-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .machine-hero-image {
+        min-height: 280px;
+        padding: 32px;
+    }
+    .machine-hero-image img {
+        max-height: 240px;
+    }
+    .machine-hero-stats {
+        flex-wrap: wrap;
+    }
+    .machine-hero-stat {
+        min-width: 90px;
+        padding: 12px 16px;
+    }
+    .machine-features-grid {
+        grid-template-columns: 1fr;
+    }
+    .machine-specs-card {
+        padding: 24px;
+    }
+    .machine-specs-grid {
+        grid-template-columns: 1fr;
+    }
+    .machine-related-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .sector-section-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .sector-section--reverse .sector-section-inner {
+        direction: ltr;
+    }
+    .sector-section-visual {
+        min-height: 260px;
+        padding: 32px;
+        font-size: 4rem;
+    }
+    .sector-nav-link {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+    .catalogue-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================
    REDUCED MOTION
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {

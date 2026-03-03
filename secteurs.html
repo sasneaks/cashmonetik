@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nos Secteurs | CashMonetik</title>
-    <meta name="description" content="Solutions monétiques adaptées à votre secteur : boulangeries, tabacs, supermarchés, pharmacies.">
+    <meta name="description" content="Solutions monétiques adaptées à votre secteur : boulangeries, tabacs, supermarchés, pharmacies. Équipements configurés pour votre activité.">
     <meta name="robots" content="index, follow">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <meta name="theme-color" content="#0a0a0f">
@@ -47,189 +47,225 @@
     </div>
 
     <main id="main-content">
-        <!-- Page Hero -->
+        <!-- HERO -->
         <section class="page-hero">
             <div class="container">
-                <span class="section-tag">Secteurs d'activité</span>
-                <h1 class="page-title">Des solutions adaptées à chaque métier</h1>
-                <p class="page-subtitle">Chaque secteur a ses spécificités. Nos équipements sont configurés et optimisés pour répondre aux exigences de votre activité.</p>
+                <span class="section-tag" data-animate="fade-up">Secteurs d'activité</span>
+                <h1 class="page-title" data-animate="fade-up">Des solutions adaptées à <span class="text-gradient">chaque métier</span></h1>
+                <p class="page-subtitle" data-animate="fade-up">Chaque secteur a ses spécificités. Nos équipements sont configurés et optimisés pour répondre aux exigences de votre activité.</p>
             </div>
         </section>
 
-        <!-- Showcase Section -->
-        <section class="showcase" id="about">
-            <div class="showcase-container">
-                <div class="showcase-backgrounds">
-                    <div class="showcase-bg active" data-index="0">
-                        <img src="assets/showcase-cafe.jpg" alt="Installation café">
-                    </div>
-                    <div class="showcase-bg" data-index="1">
-                        <img src="assets/showcase-tabac.jpg" alt="Installation tabac">
-                    </div>
-                    <div class="showcase-bg" data-index="2">
-                        <img src="assets/showcase-boulangerie.jpg" alt="Installation boulangerie">
-                    </div>
+        <!-- NAVIGATION STICKY -->
+        <nav class="sector-nav" aria-label="Navigation secteurs">
+            <div class="container">
+                <div class="sector-nav-inner">
+                    <a href="#boulangeries" class="sector-nav-link">Boulangeries</a>
+                    <a href="#tabacs" class="sector-nav-link">Tabacs</a>
+                    <a href="#supermarches" class="sector-nav-link">Supermarchés</a>
+                    <a href="#pharmacies" class="sector-nav-link">Pharmacies</a>
                 </div>
-                <div class="showcase-overlay"></div>
-                <div class="showcase-content">
-                    <div class="showcase-info">
-                        <span class="section-tag">Nos réalisations</span>
-                        <h2 class="showcase-title" id="showcase-title">Cafés & Restaurants</h2>
-                        <p class="showcase-desc" id="showcase-desc">Solutions d'encaissement modernes pour optimiser votre service client et sécuriser vos transactions.</p>
+            </div>
+        </nav>
+
+        <!-- BOULANGERIES -->
+        <section class="sector-section" id="boulangeries">
+            <div class="container">
+                <div class="sector-section-inner">
+                    <div class="sector-section-visual" data-animate="fade-up">
+                        🥖
                     </div>
-                    <div class="showcase-nav">
-                        <div class="showcase-nav-item active" data-index="0">
-                            <div class="showcase-nav-thumb">
-                                <img src="assets/showcase-cafe.jpg" alt="Café">
+                    <div class="sector-section-content" data-animate="fade-up" data-delay="0.2">
+                        <span class="section-tag">Boulangeries & Pâtisseries</span>
+                        <h2>Accélérez le service <span class="text-gradient">aux heures de pointe</span></h2>
+                        <p>Vos clients font la queue, surtout le matin et le midi. Nos solutions automatisent l'encaissement pour fluidifier le flux et éliminer les erreurs de rendu monnaie.</p>
+                        <div class="sector-benefits">
+                            <div class="sector-benefit">
+                                <svg viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                                Encaissement 3x plus rapide aux heures de pointe
                             </div>
-                            <div class="showcase-nav-text">
-                                <h4>CAFÉS & RESTAURANTS</h4>
-                                <p>Solutions d'encaissement modernes.</p>
+                            <div class="sector-benefit">
+                                <svg viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                                Zéro erreur de caisse, même avec du personnel saisonnier
                             </div>
-                        </div>
-                        <div class="showcase-nav-item" data-index="1">
-                            <div class="showcase-nav-thumb">
-                                <img src="assets/showcase-tabac.jpg" alt="Tabac">
+                            <div class="sector-benefit">
+                                <svg viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                                Pesage intégré pour les produits au poids
                             </div>
-                            <div class="showcase-nav-text">
-                                <h4>TABACS & PRESSE</h4>
-                                <p>Équipements adaptés aux contraintes.</p>
-                            </div>
-                        </div>
-                        <div class="showcase-nav-item" data-index="2">
-                            <div class="showcase-nav-thumb">
-                                <img src="assets/showcase-boulangerie.jpg" alt="Boulangerie">
-                            </div>
-                            <div class="showcase-nav-text">
-                                <h4>BOULANGERIES</h4>
-                                <p>Caisses tactiles et monnayeurs.</p>
+                            <div class="sector-benefit">
+                                <svg viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                                Hygiène renforcée : moins de manipulation d'espèces
                             </div>
                         </div>
+                        <div class="sector-pills">
+                            <a href="caisse-automatique.html" class="sector-pill">Caisse automatique</a>
+                            <a href="caisse-tactile.html" class="sector-pill">Caisse tactile</a>
+                            <a href="balance-professionnelle.html" class="sector-pill">Balance pro</a>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary" style="align-self: flex-start; margin-top: 8px;">
+                            <span>Nous contacter</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
                     </div>
-                </div>
-                <div class="showcase-scroll-indicator">
-                    <span>Scroll</span>
-                    <div class="scroll-line"></div>
                 </div>
             </div>
         </section>
 
-        <!-- Sectors Section with Flip Cards -->
-        <section class="sectors" id="sectors">
-            <div class="sectors-container">
-                <div class="section-header">
-                    <span class="section-tag">Secteurs</span>
-                    <h2>Des solutions adaptées à <span class="text-gradient">chaque métier</span></h2>
+        <!-- TABACS -->
+        <section class="sector-section sector-section--reverse" id="tabacs">
+            <div class="container">
+                <div class="sector-section-inner">
+                    <div class="sector-section-visual" data-animate="fade-up">
+                        🏪
+                    </div>
+                    <div class="sector-section-content" data-animate="fade-up" data-delay="0.2">
+                        <span class="section-tag">Tabacs & Presse</span>
+                        <h2>Sécurisez vos fonds <span class="text-gradient">au quotidien</span></h2>
+                        <p>Le tabac manipule un volume de cash important chaque jour. Nos solutions sécurisent vos espèces, automatisent le rendu monnaie et assurent une traçabilité totale conforme aux réglementations.</p>
+                        <div class="sector-benefits">
+                            <div class="sector-benefit">
+                                <svg viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                                Coffre sécurisé : espèces protégées en permanence
+                            </div>
+                            <div class="sector-benefit">
+                                <svg viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                                Conformité réglementaire et traçabilité complète
+                            </div>
+                            <div class="sector-benefit">
+                                <svg viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                                Gestion multi-activités (tabac, presse, FDJ, colis)
+                            </div>
+                            <div class="sector-benefit">
+                                <svg viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                                Comptage de caisse automatisé en fin de journée
+                            </div>
+                        </div>
+                        <div class="sector-pills">
+                            <a href="caisse-automatique.html" class="sector-pill">Caisse automatique</a>
+                            <a href="caisse-tactile.html" class="sector-pill">Caisse tactile</a>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary" style="align-self: flex-start; margin-top: 8px;">
+                            <span>Nous contacter</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="sectors-grid">
-                    <!-- Boulangeries -->
-                    <div class="sector-card">
-                        <div class="sector-card-inner">
-                            <div class="sector-card-front">
-                                <div class="sector-icon">
-                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <ellipse cx="32" cy="36" rx="22" ry="16" stroke="currentColor" stroke-width="2.5"/>
-                                        <path d="M18 32c8-4 20-4 28 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                </div>
-                                <h3>Boulangeries</h3>
-                                <span class="sector-hint">Survolez pour en savoir plus</span>
+            </div>
+        </section>
+
+        <!-- SUPERMARCHÉS -->
+        <section class="sector-section" id="supermarches">
+            <div class="container">
+                <div class="sector-section-inner">
+                    <div class="sector-section-visual" data-animate="fade-up">
+                        🛒
+                    </div>
+                    <div class="sector-section-content" data-animate="fade-up" data-delay="0.2">
+                        <span class="section-tag">Supermarchés & Épiceries</span>
+                        <h2>Fluidifiez le passage <span class="text-gradient">en caisse</span></h2>
+                        <p>Files d'attente, paniers abandonnés, erreurs de caisse : nos solutions multi-caisses automatisées réduisent l'attente et augmentent le panier moyen grâce aux bornes de commande.</p>
+                        <div class="sector-benefits">
+                            <div class="sector-benefit">
+                                <svg viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                                Multi-caisses avec rapports consolidés
                             </div>
-                            <div class="sector-card-back">
-                                <h4>Boulangeries</h4>
-                                <p>Caisse tactile, terminaux de paiement et bornes de commande pour optimiser le flux client et accélérer le service aux heures de pointe.</p>
-                                <ul>
-                                    <li>Encaissement rapide</li>
-                                    <li>Gestion des stocks</li>
-                                    <li>Fidélité client</li>
-                                </ul>
-                                <a href="contact.html" class="sector-cta">Demander un devis</a>
+                            <div class="sector-benefit">
+                                <svg viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                                Bornes self-checkout pour réduire les files d'attente
                             </div>
+                            <div class="sector-benefit">
+                                <svg viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                                +25% de panier moyen avec les bornes de commande
+                            </div>
+                            <div class="sector-benefit">
+                                <svg viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                                Gestion centralisée multi-magasins
+                            </div>
+                        </div>
+                        <div class="sector-pills">
+                            <a href="caisse-automatique.html" class="sector-pill">Caisse automatique</a>
+                            <a href="borne-commande.html" class="sector-pill">Borne de commande</a>
+                            <a href="caisse-tactile.html" class="sector-pill">Caisse tactile</a>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary" style="align-self: flex-start; margin-top: 8px;">
+                            <span>Nous contacter</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHARMACIES -->
+        <section class="sector-section sector-section--reverse" id="pharmacies">
+            <div class="container">
+                <div class="sector-section-inner">
+                    <div class="sector-section-visual" data-animate="fade-up">
+                        💊
+                    </div>
+                    <div class="sector-section-content" data-animate="fade-up" data-delay="0.2">
+                        <span class="section-tag">Pharmacies & Officines</span>
+                        <h2>Discrétion et sécurité <span class="text-gradient">pour votre officine</span></h2>
+                        <p>Les pharmacies exigent discrétion, hygiène et sécurité maximale. Nos solutions compactes s'intègrent parfaitement à votre comptoir et s'interfacent avec vos logiciels métier.</p>
+                        <div class="sector-benefits">
+                            <div class="sector-benefit">
+                                <svg viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                                Design compact et discret adapté au comptoir
+                            </div>
+                            <div class="sector-benefit">
+                                <svg viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                                Intégration avec les logiciels de gestion officinale
+                            </div>
+                            <div class="sector-benefit">
+                                <svg viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                                Hygiène renforcée : moins de contact avec les espèces
+                            </div>
+                            <div class="sector-benefit">
+                                <svg viewBox="0 0 20 20" fill="none"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/></svg>
+                                Sécurité maximale avec coffre intégré
+                            </div>
+                        </div>
+                        <div class="sector-pills">
+                            <a href="caisse-automatique.html" class="sector-pill">Caisse automatique</a>
+                            <a href="caisse-tactile.html" class="sector-pill">Caisse tactile</a>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary" style="align-self: flex-start; margin-top: 8px;">
+                            <span>Nous contacter</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section id="cta-final">
+            <div class="cta-final-bg" aria-hidden="true"><div class="cta-final-glow"></div></div>
+            <div class="container">
+                <div class="cta-final-content" data-animate="fade-up">
+                    <span class="section-tag">Prêt à passer à l'action ?</span>
+                    <h2>Trouvez la solution <span class="text-gradient">idéale pour votre commerce</span></h2>
+                    <div class="hero-social-proof" style="justify-content: center; margin-bottom: 24px;">
+                        <div class="hero-social-proof-item">
+                            <strong>300+</strong>
+                            <span>commerces équipés</span>
+                        </div>
+                        <div class="hero-social-proof-divider"></div>
+                        <div class="hero-social-proof-item">
+                            <strong>98%</strong>
+                            <span>clients satisfaits</span>
                         </div>
                     </div>
-
-                    <!-- Tabacs -->
-                    <div class="sector-card">
-                        <div class="sector-card-inner">
-                            <div class="sector-card-front">
-                                <div class="sector-icon">
-                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M32 8L48 32L32 56L16 32L32 8Z" stroke="currentColor" stroke-width="2.5" fill="none"/>
-                                        <path d="M32 16L40 32L32 48L24 32L32 16Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                                        <circle cx="32" cy="32" r="4" stroke="currentColor" stroke-width="1.5"/>
-                                    </svg>
-                                </div>
-                                <h3>Tabacs</h3>
-                                <span class="sector-hint">Survolez pour en savoir plus</span>
-                            </div>
-                            <div class="sector-card-back">
-                                <h4>Tabacs</h4>
-                                <p>Équipements adaptés aux contraintes réglementaires avec traçabilité complète et sécurité renforcée pour votre activité.</p>
-                                <ul>
-                                    <li>Conformité légale</li>
-                                    <li>Traçabilité totale</li>
-                                    <li>Sécurité des fonds</li>
-                                </ul>
-                                <a href="contact.html" class="sector-cta">Demander un devis</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Supermarchés -->
-                    <div class="sector-card">
-                        <div class="sector-card-inner">
-                            <div class="sector-card-front">
-                                <div class="sector-icon">
-                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10 12h6l4 8h32l-4 20H24l-6-28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <circle cx="26" cy="52" r="4" stroke="currentColor" stroke-width="2"/>
-                                        <circle cx="44" cy="52" r="4" stroke="currentColor" stroke-width="2"/>
-                                        <rect x="26" y="24" width="8" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                                        <rect x="36" y="26" width="6" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                                    </svg>
-                                </div>
-                                <h3>Supermarchés</h3>
-                                <span class="sector-hint">Survolez pour en savoir plus</span>
-                            </div>
-                            <div class="sector-card-back">
-                                <h4>Supermarchés</h4>
-                                <p>Caisses automatiques, gestion centralisée et rapports consolidés pour vos points de vente multiples.</p>
-                                <ul>
-                                    <li>Multi-caisses</li>
-                                    <li>Rapports centralisés</li>
-                                    <li>Self-checkout</li>
-                                </ul>
-                                <a href="contact.html" class="sector-cta">Demander un devis</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Pharmacies -->
-                    <div class="sector-card">
-                        <div class="sector-card-inner">
-                            <div class="sector-card-front">
-                                <div class="sector-icon">
-                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect x="24" y="8" width="16" height="48" rx="2" stroke="currentColor" stroke-width="2.5"/>
-                                        <rect x="8" y="24" width="48" height="16" rx="2" stroke="currentColor" stroke-width="2.5"/>
-                                        <circle cx="32" cy="32" r="6" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                                        <path d="M29 32l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                                <h3>Pharmacies</h3>
-                                <span class="sector-hint">Survolez pour en savoir plus</span>
-                            </div>
-                            <div class="sector-card-back">
-                                <h4>Pharmacies</h4>
-                                <p>Solutions discrètes et compactes avec sécurité renforcée et intégration logicielle pour votre officine.</p>
-                                <ul>
-                                    <li>Discrétion maximale</li>
-                                    <li>Intégration logiciel</li>
-                                    <li>Compact et sécurisé</li>
-                                </ul>
-                                <a href="contact.html" class="sector-cta">Demander un devis</a>
-                            </div>
-                        </div>
+                    <p>Recevez un audit personnalisé gratuit et une proposition sur mesure. Sans engagement.</p>
+                    <div class="cta-final-actions">
+                        <a href="contact.html" class="btn btn-primary btn-xl">
+                            <span>Demander un audit gratuit</span>
+                            <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <a href="tel:+33668001030" class="btn btn-outline btn-xl">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>06 68 00 10 30</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -249,7 +285,7 @@
                     </div>
                 </div>
                 <div class="footer-links"><h4>Navigation</h4><a href="a-propos.html">À propos</a><a href="secteurs.html">Secteurs</a><a href="catalogue.html">Catalogue</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
-                <div class="footer-links"><h4>Secteurs</h4><a href="secteurs.html">Boulangeries</a><a href="secteurs.html">Tabacs</a><a href="secteurs.html">Supermarchés</a><a href="secteurs.html">Pharmacies</a></div>
+                <div class="footer-links"><h4>Secteurs</h4><a href="secteurs.html#boulangeries">Boulangeries</a><a href="secteurs.html#tabacs">Tabacs</a><a href="secteurs.html#supermarches">Supermarchés</a><a href="secteurs.html#pharmacies">Pharmacies</a></div>
                 <div class="footer-links"><h4>Légal</h4><a href="mentions-legales.html">Mentions légales</a><a href="politique-confidentialite.html">Confidentialité</a><a href="cgv.html">CGV</a></div>
             </div>
             <div class="footer-bottom"><p>&copy; 2026 CashMonetik. Tous droits réservés.</p></div>
