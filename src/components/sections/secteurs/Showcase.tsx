@@ -51,7 +51,7 @@ const sectorData = [
     title: 'Supermarchés & Épiceries',
     description:
       "Fluidifiez le passage en caisse, centralisez vos rapports et offrez une expérience de commande moderne à vos clients avec nos bornes en libre-service.",
-    image: '/assets/showcase-cafe.webp',
+    image: '/assets/showcase-supermarche.jpg',
     benefits: [
       'Multi-caisses centralisées',
       'Bornes de commande en libre-service',
@@ -69,7 +69,7 @@ const sectorData = [
     title: 'Pharmacies & Officines',
     description:
       "Discrétion maximale et intégration avec votre logiciel métier. Nos solutions automatisent l'encaissement en toute confidentialité pour vos patients.",
-    image: '/assets/showcase-boulangerie.webp',
+    image: '/assets/showcase-pharmacie.jpg',
     benefits: [
       'Discrétion maximale pour les patients',
       'Intégration LGO (logiciel de gestion officine)',

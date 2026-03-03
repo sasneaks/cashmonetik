@@ -363,7 +363,7 @@ export function MachinePageLayout({
               custom={0.1}
               className="text-[1.05rem] text-text-secondary leading-relaxed mb-10"
             >
-              Demandez un audit gratuit de 30 minutes. Un expert analyse vos besoins
+              Demandez un audit gratuit. Un expert analyse vos besoins
               et vous recommande la solution idéale, sans engagement.
             </motion.p>
             <motion.div

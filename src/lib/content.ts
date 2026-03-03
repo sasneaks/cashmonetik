@@ -129,8 +129,8 @@ export const howItWorks = [
   {
     number: '01',
     title: 'Audit gratuit',
-    description: 'Un expert analyse vos besoins et vous recommande la solution idéale. 30 minutes, sans engagement, à distance ou sur place.',
-    detail: '30 minutes',
+    description: 'Un expert analyse vos besoins et vous recommande la solution idéale. Sans engagement, à distance ou sur place.',
+    detail: 'Rapide',
     detailIcon: 'clock' as const,
   },
   {
